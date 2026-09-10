@@ -7,8 +7,11 @@ Início	Apresentação do projeto, chamada para adoção e destaques.	Botão par
 Catálogo	Cards dos animais disponíveis.	Busca por nome e filtros por espécie, porte e localização.
 
 Perfil do animal	Fotos, idade, porte, comportamento, cuidados e status.	Favoritar ou iniciar manifestação de interesse.
+
 Favoritos	Animais marcados pelo usuário.	Remover favorito ou abrir o perfil novamente.
+
 Quero adotar	Formulário com dados do interessado e perguntas de responsabilidade.	Validar, enviar e exibir confirmação na página.
+
 Minhas solicitações	Lista das manifestações registradas.	Consultar dados e cancelar uma solicitação simulada.
 
 
