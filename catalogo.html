@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pata Certa</title>
+</head>
+
+<body>
+    <header>
+    <h1>Catálogo</h1>
+    </header>
+    <br><br>
+
+    <section class="introCatalogo">
+        <div>
+            <h1>Adoção responsável, sem burocracia</h1>
+            <p>Reunimos os bichanos resgatados pelas ONGs parceiras da nossa região num só lugar. Filtre por espécie, porte e marque uma visita em poucos cliques.</p>
+            <div class="status1">
+                <div class="status2">
+                    <div class="num">10</div>
+                    <div class="label">Disponíveis agora</div>
+            </div>
+            <div class="status2">
+                <div class="num">89</div>
+                <div class="label">Adoções realizadas</div>
+            </div>
+            <div class="status2">
+                <div class="num">6</div>
+                <div class="label">ONGs parceiras</div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="filter-bar" id="catalogo">
+            <button class="filtro" data-species="all" aria-pressed="true">Todos</button>
+            <button class="filtro" data-species="dog" aria-pressed="false">Cães</button>
+            <button class="filtro" data-species="cat" aria-pressed="false">Gatos</button>
+        </div>
+
+        <div class="pesquisar">
+            <input type="search" id="pesquisar" placeholder="Buscar por nome ou raça">
+        </div>
+</body>
