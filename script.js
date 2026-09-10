@@ -20,6 +20,8 @@ const animais = [
          <p>${animal.idade}</p>
           <p>${animal.porte}</p>
             <p>${animal.sexo}</p>
+            <p>${animal.cidade}</p>
+            <p>${animal.status}</p>
             <button> Ver detalhes</button>
             `;
             lista.appendChild(article);
