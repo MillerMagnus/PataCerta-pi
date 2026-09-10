@@ -1,22 +1,29 @@
 # PataCerta-pi
 PI Front End Senac UC5
 
-
-
-
 -----------------------------------------
+Início	Apresentação do projeto, chamada para adoção e destaques.	Botão para conhecer os animais e indicadores gerais.
+
+Catálogo	Cards dos animais disponíveis.	Busca por nome e filtros por espécie, porte e localização.
+
+Perfil do animal	Fotos, idade, porte, comportamento, cuidados e status.	Favoritar ou iniciar manifestação de interesse.
+Favoritos	Animais marcados pelo usuário.	Remover favorito ou abrir o perfil novamente.
+Quero adotar	Formulário com dados do interessado e perguntas de responsabilidade.	Validar, enviar e exibir confirmação na página.
+Minhas solicitações	Lista das manifestações registradas.	Consultar dados e cancelar uma solicitação simulada.
 
 
-
+----------------------------------
 
 PROJETO INTEGRADOR  |  FRONT-END
 Pata Certa
 Portal de adoção responsável de animais
 DOCUMENTO DE APOIO - GRUPO 1
 INTEGRANTES
-Mariana Ferreira Sapateiro
+Luiz
 Muller Ribeiro Bueno
-Felipe Adonis Tedeschi Colturato
+Antonio
+Maria
+
 HTML  |  CSS  |  JAVASCRIPT  |  DOM  |  LOCALSTORAGE
 Docente: Isabella Frederico Celestrino
  
