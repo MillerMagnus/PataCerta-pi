@@ -7,7 +7,8 @@ const animais = [
     idade: "2 anos",
     sexo: "femea",
     cidade: "Aracatuba",
-    status: "Disponivel"
+    status: "Disponivel",
+    imagem: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/Tomilho-Lucy-M.jpg"
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const animais = [
     idade: "10 meses",
     sexo: "macho",
     cidade: "Aracatuba",
-    status: "Disponivel"
+    status: "Disponivel",
+    imagem:""
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const animais = [
     idade: "1 anos",
     sexo: "femea",
     cidade: "Aracatuba",
-    status: "Disponivel"
+    status: "Disponivel",
+    imagem: ""
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const animais = [
     idade: "5 meses",
     sexo: "femea",
     cidade: "Aracatuba",
-    status: "Disponivel"
+    status: "Disponivel",
+    imagem: ""
   },
 ];
 const lista = document.querySelector("#cardpet");
