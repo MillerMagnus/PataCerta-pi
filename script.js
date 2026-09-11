@@ -4,11 +4,41 @@ const animais = [
     nome: "Luna",
     especie: "Gato",
     porte: "Pequeno",
-    idade: 2,
+    idade: "2 anos",
     sexo: "femea",
     cidade: "Aracatuba",
     status: "Disponivel"
-  }
+  },
+  {
+    id: 2,
+    nome: "Thor",
+    especie: "Cachorro",
+    porte: "Grande",
+    idade: "10 meses",
+    sexo: "macho",
+    cidade: "Aracatuba",
+    status: "Disponivel"
+  },
+  {
+    id: 3,
+    nome: "Zara",
+    especie: "Gato",
+    porte: "Pequeno",
+    idade: "1 anos",
+    sexo: "femea",
+    cidade: "Aracatuba",
+    status: "Disponivel"
+  },
+  {
+    id: 4,
+    nome: "Valkiria",
+    especie: "Cadela",
+    porte: "Grande",
+    idade: "5 meses",
+    sexo: "femea",
+    cidade: "Aracatuba",
+    status: "Disponivel"
+  },
 ];
  const lista = document.querySelector("#cardpet");
   animais.forEach(animal => {
