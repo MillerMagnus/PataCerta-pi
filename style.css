@@ -1,5 +1,5 @@
 
-/*----------------------------------------------------------------
+/*----------------------------------------------------------------*/
 /* CATALOGO */
 header.catalogoHeader {
     background-color: #1e3b29;
@@ -96,4 +96,21 @@ input#pesquisar {
     justify-content: space-around;
     margin-top: 20px;
 }
-/*----------------------------------------------------------------
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+
+section.sectionpets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+perfilpet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
