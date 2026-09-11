@@ -1,3 +1,6 @@
+
+/* ----------------------------------------------------------------------------------------*/
+/* CATALOGO */
 const animais = [
   {
     id: 1,
@@ -44,6 +47,9 @@ const animais = [
     imagem: ""
   },
 ];
+
+/*----------------------------------------------------------------------------------------*/
+
 const lista = document.querySelector("#cardpet");
   animais.forEach(animal => {
     const article = document.createElement ("article");
@@ -60,3 +66,4 @@ const lista = document.querySelector("#cardpet");
             `;
             lista.appendChild(article);
   });
+
