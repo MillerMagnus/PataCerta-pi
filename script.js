@@ -54,6 +54,7 @@ const listaCardpet = document.querySelector("#cardpet");
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
+    article.dataset.class = "cardpet";
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>

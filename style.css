@@ -80,6 +80,12 @@ input#pesquisar {
 
 /*----------------------------------------------------------------*/
 
+mainperfilpet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}   
 
 section.sectionpets {
     display: flex;
