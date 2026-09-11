@@ -39,6 +39,12 @@ div.barrastatus {
     margin-top: 20px;
 }
 
+div.num{
+    font-size: 35px;
+    color: #1e3b29;
+    text-align: center;
+}
+
 div.filter-bar {
     display: flex;
     justify-content: space-between;
