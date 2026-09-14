@@ -2,6 +2,11 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mogra&display=swap" rel="stylesheet">
+
         <script src="script.js" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +14,23 @@
     </head>
 <body>
 
-<header class="cabecalho">
-    <h1>Pata Certa</h1>
-        <h2>O lugar perfeito para encontrar um novo amigo</h2> 
+<header class="homeHeader">
+    <h1 class="caveat-700">Pata Certa</h1>
+        <h2 class="caveat-400">O lugar perfeito para encontrar um novo amigo</h2> 
         <div class="limite"></div>
         <a href="index.html" class="marca">
-        <span class="marca-pata" aria-hidden="true">🐾</span>
-    </a>
+        <span class="marca-pata" aria-hidden="true">🐾</span></a>
     </div>
 </header>
 
     <main>
 
 <div class="limite"></div>
-    <nav aria-label="Navegação principal">
-        <ul>
-        <button class="butaolink"><a href="index.html" data-pagina="inicio">Início</a></button>
+    <nav aria-label="Navegação principal"   class="homeNav"> 
+        <button class="butaolink"><a href="home.html" data-pagina="inicio">Início</a></button>
         <button class="butaolink"><a href="catalogo.html" data-pagina="catalogo">Catálogo</a></button>
         <button class="butaolink"><a href="favoritos.html" data-pagina="favoritos">Favoritos <span class="contador-favoritos" data-contador-favoritos hidden>0</span></a></button>
         <button class="butaolink"><a href="perfilpet.html" data-pagina="perfil pet">PerfilPet</a></button>
-        </ul>
     </nav>
 </div>
 
@@ -75,14 +77,14 @@
         <div class="pilha">
         <strong>Pata Certa</strong>
         <p class="texto-suave">Portal de adoção responsável de animais.</p>
-    </div>
-    <nav aria-label="Links do rodapé">
-        <ul class="pilha">
-        <li><a href="catalogo.html">Ver catálogo</a></li>
-        <li><a href="solicitacoes.html">Minhas solicitações</a></li>
-        </ul>
+        </div>
+        <nav aria-label="Links do rodapé">
+            <ul class="pilha">
+            <li><a href="catalogo.html">Ver catálogo</a></li>
+            <li><a href="solicitacoes.html">Minhas solicitações</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2026 Pata Certa.</p>
-    </nav>
         </div>
 </footer>
 </main>

@@ -1,6 +1,69 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------------------*/
+/* HOME y INDEX */
+
+header.homeHeader {
+    background-color: #1e3b29;
+    font-family: 20px, Arial, sans-serif;
+    color: #ffffff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.homeNav {
+    background-color: #1e3b29;
+    font-family: 20px, Arial, sans-serif;
+    color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.butaolink {
+    background-color: #5e615f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+}
+.butaolink a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.caveat-400 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.caveat-700 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
 
 /*----------------------------------------------------------------*/
 /* CATALOGO */
+
 header.catalogoHeader {
     background-color: #1e3b29;
     font-family: 20px, Arial, sans-serif;
@@ -96,8 +159,9 @@ article.cardpet {
     justify-content: space-around;
     margin-top: 20px;
 }
+
 /*----------------------------------------------------------------*/
-/*----------------------------------------------------------------*/
+/* PERFILPET */
 
 mainperfilpet {
     display: flex;
@@ -120,3 +184,17 @@ perfilpet {
     justify-content: center;
     margin-top: 20px;
 }
+
+
+/*----------------------------------------------------------------*/
+/* FAVORITOS */
+
+
+
+/*----------------------------------------------------------------*/
+/* --- */
+
+
+
+/*----------------------------------------------------------------*/
+/* --- */
