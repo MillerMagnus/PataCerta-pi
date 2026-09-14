@@ -163,7 +163,7 @@ article.cardpet {
 /*----------------------------------------------------------------*/
 /* PERFILPET */
 
-mainperfilpet {
+.mainperfilpet {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,7 +177,7 @@ section.sectionpets {
     justify-content: center;
     margin-top: 20px;
 }
-perfilpet {
+.perfilpet {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
