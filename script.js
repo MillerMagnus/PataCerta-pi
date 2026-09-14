@@ -51,10 +51,11 @@ const animais = [
 /*----------------------------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
+  if (listaCardpet) {
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
-    article.dataset.class = "cardpet";
+    article.className = "cardpet";
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
@@ -67,24 +68,24 @@ const listaCardpet = document.querySelector("#cardpet");
             `;
             listaCardpet.appendChild(article);
   });
+}
 
-  const listaCatalogoPet = document.querySelector("#perfilpet");
-  animais.forEach(animal => {
-    const article = document.createElement ("article");
-    article.dataset.id = animal.id;
-    article.innerHTML = `
-    <img src = "${animal.imagem}" alt ="${animal.nome}">
-        <h2>${animal.nome}</h2>
-        <p>${animal.especie}</p>
-        <p>${animal.idade}</p>
-           <p>${animal.porte}</p> 
-              <p>${animal.sexo}</p>
-              <p>${animal.cidade}</p>
-            <p>${animal.status}</p>
-            <a href="perfilpet.html?id=${animal.id}">
-            <button> Ver detalhes</button>
-            </a>
-            `;
-            listaCatalogoPet.appendChild(article);
-  });
+ const listaCatalogoPet = document.querySelector("#perfilpet");
 
+const params = new URLSearchParams(window.location.search);
+const id = Number(params.get("id"));
+
+const animal = animais.find(animal => animal.id === id);
+
+if (animal) {
+  listaCatalogoPet.innerHTML = `
+    <img src="${animal.imagem}" alt="${animal.nome}">
+    <h2>${animal.nome}</h2>
+    <p>${animal.especie}</p>
+    <p>${animal.idade}</p>
+    <p>${animal.porte}</p>
+    <p>${animal.sexo}</p>
+    <p>${animal.cidade}</p>
+    <p>${animal.status}</p>
+  `;
+}
