@@ -67,11 +67,8 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-<<<<<<< Updated upstream
               <span class="slider round"</span>
-=======
               <span class="slider"</span>
->>>>>>> Stashed changes
             </label>
             `;
             listaCardpet.appendChild(article);
