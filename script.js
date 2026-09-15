@@ -60,21 +60,25 @@ const listaCardpet = document.querySelector("#cardpet");
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
         <p>${animal.especie}</p>
-         <p>${animal.idade}</p>
+        <p>${animal.idade}</p>
             <p>${animal.status}</p>
             <a href="perfilpet.html?id=${animal.id}">
             <button> Ver detalhes</button>
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
+<<<<<<< Updated upstream
               <span class="slider round"</span>
+=======
+              <span class="slider"</span>
+>>>>>>> Stashed changes
             </label>
             `;
             listaCardpet.appendChild(article);
   });
 }
 
- const listaCatalogoPet = document.querySelector("#perfilpet");
+const listaCatalogoPet = document.querySelector("#perfilpet");
 
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
