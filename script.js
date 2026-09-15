@@ -55,7 +55,7 @@ const listaCardpet = document.querySelector("#cardpet");
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
-    article.className = "cardpet";
+    article.className = "caixapet";
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
@@ -65,6 +65,10 @@ const listaCardpet = document.querySelector("#cardpet");
             <a href="perfilpet.html?id=${animal.id}">
             <button> Ver detalhes</button>
             </a>
+            <label class="favoritar"> 
+            <input type="checkbox" name="favoritar" value="${animal.id}">
+               <span class="slider"</span>
+            </label>
             `;
             listaCardpet.appendChild(article);
   });
