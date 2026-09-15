@@ -143,16 +143,16 @@ input#pesquisar {
     font-size: 16px;
 }
 
-article.cardpet {
+article.caixapet {
     background-color: #ffffff;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: row;
-    width: 400px;   
-    height: 1250px;
+    width: 350px;   
+    height: 550px;
 }
 
 .sectionpets {
