@@ -47,20 +47,12 @@ const animais = [
     imagem: ""
   },
 ];
-<<<<<<< HEAD
- let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-/*----------------------------------------------------------------------------------------*/
-
-const listaCardpet = document.querySelector("#cardpet");
-if (listaCardpetardpet) {
-=======
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 /*----------------------------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
   if (listaCardpet) {
->>>>>>> parent of 97d8390 (Merge branch 'main' of https://github.com/MillerMagnus/PataCerta-pi)
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
@@ -130,8 +122,5 @@ if (animal) {
       <p>${animal.especie}</p>
     </article>`;
   });
-<<<<<<< HEAD
  }
-=======
- }
->>>>>>> parent of 97d8390 (Merge branch 'main' of https://github.com/MillerMagnus/PataCerta-pi)
+ 
