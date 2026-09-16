@@ -47,6 +47,7 @@ const animais = [
     imagem: ""
   },
 ];
+let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -67,8 +68,8 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="slider round"</span>
-              <span class="slider"</span>
+              <span class="slider round"></span>
+              <span class="slider"></span>
             </label>
             `;
             listaCardpet.appendChild(article);
@@ -76,9 +77,9 @@ const listaCardpet = document.querySelector("#cardpet");
 }
  const checkboxes = document.querySelectorAll('input[name="favoritar"]');
  checkboxes.forEach(checkbox => {
-  checkbox.addEventListener("charge",() => {
+  checkbox.addEventListener("change",() => {
     const id = checkbox.value;
-     if ( checkbox.cheked){
+     if ( checkbox.checked){
       if (!favoritos.includes(id)) {
         favoritos.push(id);
       }
@@ -91,6 +92,7 @@ const listaCardpet = document.querySelector("#cardpet");
  });
 
 const listaCatalogoPet = document.querySelector("#perfilpet");
+if (listaCatalogoPet){
 
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
@@ -109,9 +111,10 @@ if (animal) {
     <p>${animal.status}</p>
   `;
 }
+}
  const paginaFav = document.querySelector("#favoritos");
  if (paginaFav) {
-  const animaisFav = animais.filter (animal => favoritos.includes(string(animal.id)));
+  const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
   animaisFav.forEach(animal => {
     paginaFav.innerHTML += `<article>
       <img src = "${animal.imagem}" alt="${animal.nome}"></img>
