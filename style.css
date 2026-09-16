@@ -69,7 +69,7 @@ nav.homeNav {
 header.catalogoHeader {
     background-color: #1e3b29;
     font-family: 20px, Arial, sans-serif;
-    color: #ffffff;
+    color: #e6c4c4;
     height: 100px;
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@ div.filter-bar {
 
 button.filtro{
     background-color: #1e3b29;
-    color: #ffffff;
+    color: #e6c4c4;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -144,7 +144,7 @@ input#pesquisar {
 }
 
 article.caixapet {
-    background-color: #e1e1e1;
+    background-color: #eac9c9;
     border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 20px;
