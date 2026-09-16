@@ -73,6 +73,21 @@ const listaCardpet = document.querySelector("#cardpet");
             listaCardpet.appendChild(article);
   });
 }
+ const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+ checkboxes.forEach(checkbox => {
+  checkbox.addEventListener("charge",() => {
+    const id = checkbox.value;
+     if ( checkbox.cheked){
+      if (!favoritos.includes(id)) {
+        favoritos.push(id);
+      }
+     }
+     else {
+      favoritos = favoritos.filter( favorito => favorito !==id);
+     }
+     localStorage.setItem("favoritos",JSON.stringify(favoritos));
+  });
+ });
 
  const listaCatalogoPet = document.querySelector("#perfilpet");
 
@@ -93,3 +108,14 @@ if (animal) {
     <p>${animal.status}</p>
   `;
 }
+ const paginaFav = document.querySelector("#favoritos");
+ if (paginaFav) {
+  const animaisFav = animais.filter (animal => favoritos.includes(string(animal.id)));
+  animaisFav.forEach(animal => {
+    paginaFav.innerHTML += `<article>
+      <img src = "${animal.imagem}" alt="${animal.nome}"></img>
+      <h2> ${animal.nome}</h2>
+      <p>${animal.especie}</p>
+    </article>`;
+  });
+ }
