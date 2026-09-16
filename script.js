@@ -11,7 +11,8 @@ const animais = [
     sexo: "femea",
     cidade: "Aracatuba",
     status: "Disponivel",
-    imagem: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/Tomilho-Lucy-M.jpg"
+    imagem: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/Tomilho-Lucy-M.jpg",
+    descricao: "Luna é uma gata muito carinhosa e brincalhona. Ela adora receber atenção e se dá bem com outros animais. Ela foi encontrada abandonada .",
   },
   {
     id: 2,
@@ -68,8 +69,7 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="slider round"></span>
-              <span class="slider"></span>
+              <span class="checkmark"></span>
             </label>
             `;
             listaCardpet.appendChild(article);
@@ -108,6 +108,7 @@ if (animal) {
     <p>${animal.sexo}</p>
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
+    <p>${animal.descricao}</p>
   `;
 }
 }
