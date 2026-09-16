@@ -47,10 +47,11 @@ const animais = [
     imagem: ""
   },
 ];
-
+ let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 /*----------------------------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
+if (listaCardpetardpet) {
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
@@ -119,4 +120,4 @@ if (animal) {
       <p>${animal.especie}</p>
     </article>`;
   });
-
+ }
