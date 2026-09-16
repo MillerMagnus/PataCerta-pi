@@ -1,75 +1,10 @@
-/* CONFIGURAÇÕES GERAIS */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-/*----------------------------------------------------------------*/
-/* HOME y INDEX */
-
-header.homeHeader {
-    background-color: #1e3b29;
-    font-family: 20px, Arial, sans-serif;
-    color: #ffffff;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-nav.homeNav {
-    background-color: #1e3b29;
-    font-family: 20px, Arial, sans-serif;
-    color: #ffffff;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.butaolink {
-    background-color: #5e615f;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 5px;
-}
-.butaolink a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-
-.caveat-400 {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-.caveat-700 {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
 
 /*----------------------------------------------------------------*/
 /* CATALOGO */
-
 header.catalogoHeader {
     background-color: #1e3b29;
     font-family: 20px, Arial, sans-serif;
-    color: #e6c4c4;
+    color: #ffffff;
     height: 100px;
     display: flex;
     align-items: center;
@@ -77,7 +12,7 @@ header.catalogoHeader {
 }
 
 div.caixaSlogan {
-    background-color: #eac9c9;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -120,7 +55,7 @@ div.filter-bar {
 
 button.filtro{
     background-color: #1e3b29;
-    color: #e6c4c4;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -143,79 +78,8 @@ input#pesquisar {
     font-size: 16px;
 }
 
-article.caixapet {
-    background-color: #eac9c9;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: row;
-    width: 350px;   
-    height: 550px;
-}
-
-.sectionpets {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.favoritar {
-    position:relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-.favoritar input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-}
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-}
-input:checked + .slider {
-    background-color: #2196F3;
-}
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-.slider.round {
-    border-radius: 34px;
-}
-.slider.round:before {
-    border-radius: 50%;
-}
-
 /*----------------------------------------------------------------*/
-/* PERFILPET */
 
-.mainperfilpet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}   
 
 section.sectionpets {
     display: flex;
@@ -224,7 +88,7 @@ section.sectionpets {
     justify-content: center;
     margin-top: 20px;
 }
-.perfilpet {
+perfilpet {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -232,16 +96,5 @@ section.sectionpets {
     margin-top: 20px;
 }
 
-
 /*----------------------------------------------------------------*/
-/* FAVORITOS */
-
-
-
-/*----------------------------------------------------------------*/
-/* --- */
-
-
-
-/*----------------------------------------------------------------*/
-/* --- */
+/* HOME */
