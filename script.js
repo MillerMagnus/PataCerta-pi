@@ -67,7 +67,7 @@ const listaCardpet = document.querySelector("#cardpet");
             <button> Ver detalhes</button>
             </a>
             <label class="favoritar"> 
-            <input type="checkbox" name="favoritar" value="${animal.id}">
+            <input type="checkbox" name="favoritar" value="${animal.id}" ${favoritos.includes(String(animal.id))? checked : ""}>
               <span class="slider round"></span>
               <span class="slider"></span>
             </label>
