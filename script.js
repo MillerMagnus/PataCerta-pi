@@ -22,7 +22,7 @@ const animais = [
     sexo: "macho",
     cidade: "Aracatuba",
     status: "Disponivel",
-    imagem:""
+    imagem:"C:\Users\luiz.fpchagas\Downloads\Foto-de-Cachorro-6.jpg"
   },
   {
     id: 3,
@@ -47,21 +47,19 @@ const animais = [
     imagem: ""
   },
 ];
-let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-
+ let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 /*----------------------------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
-  if (listaCardpet) {
+if (listaCardpetardpet) {
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
-    article.className = "caixapet";
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
         <p>${animal.especie}</p>
-        <p>${animal.idade}</p>
+         <p>${animal.idade}</p>
             <p>${animal.status}</p>
             <a href="perfilpet.html?id=${animal.id}">
             <button> Ver detalhes</button>
@@ -90,7 +88,6 @@ const listaCardpet = document.querySelector("#cardpet");
      localStorage.setItem("favoritos",JSON.stringify(favoritos));
   });
  });
-
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -112,6 +109,7 @@ if (animal) {
   `;
 }
 }
+
  const paginaFav = document.querySelector("#favoritos");
  if (paginaFav) {
   const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
