@@ -68,8 +68,7 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="slider round"></span>
-              <span class="slider"></span>
+              <span class="checkmark"></span>
             </label>
             `;
             listaCardpet.appendChild(article);
