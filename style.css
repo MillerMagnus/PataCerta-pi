@@ -51,6 +51,7 @@ nav.homeNav {
     font-size: 16px;
     margin: 0 5px;
 }
+
 .butaolink a {
     color: #1e3b29;
     text-decoration: none;
@@ -63,14 +64,12 @@ nav.homeNav {
     font-style: normal;
 }
 
-
 .caveat-700 {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
-
 
 .rodape{
     background-color:#1e3b29;
