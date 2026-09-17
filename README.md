@@ -1,6 +1,7 @@
 # PataCerta-pi
 PI Front End Senac UC5
 
+cupom de ração por adoção.
 
 https://publicapis.dev/resource/petfinder/cmw5ypur
 

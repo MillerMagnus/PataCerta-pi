@@ -247,9 +247,12 @@ article.caixapet {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: row;
     width: 350px;   
     height: 550px;
+}
+.cardpet {
+    display: flex;
+    flex-direction: row;
 }
 
 .sectionpets {
@@ -257,6 +260,7 @@ article.caixapet {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
+    flex-direction: column;
 }
 
 .favoritar {
