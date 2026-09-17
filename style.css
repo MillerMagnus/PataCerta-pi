@@ -17,7 +17,7 @@
 }
 
 /*----------------------------------------------------------------*/
-/* HOME y INDEX */
+/* HOME, header, nav y footer */
 
 header.homeHeader {
     background-color: #1e3b29;
@@ -26,7 +26,7 @@ header.homeHeader {
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 20px;
 }
 
@@ -91,6 +91,13 @@ article.home-article {
     text-align: center;
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .pilha {
     color: #ffffff;
     display: flex;
@@ -100,6 +107,8 @@ article.home-article {
     margin-top: 10px;
     justify-content: center;
 }
+
+/* divs y containers do home */
 
 .home-section {
     display: flex;
@@ -136,21 +145,22 @@ article.home-article {
 
 header.catalogoHeader {
     background-color: #1e3b29;
-    font-family: 20px, Arial, sans-serif;
     color: #e6c4c4;
     height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: space-around;
 }
 
 
 
 nav.navPrincipal {
+    background-color: #1e3b29;
+    color: #e6c4c4;
+    text-align: center;
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-left: 40px;
 }
 
 nav.navPrincipal a {
