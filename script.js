@@ -124,4 +124,6 @@ if (animal) {
     </article>`;
   });
  }
+ const quantidade = document.getElementById("contAnimais");
+ quantidade.textContent = animais.length;
  
