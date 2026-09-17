@@ -71,6 +71,11 @@ const listaCardpet = document.querySelector("#cardpet");
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="checkmark"></span>
             </label>
+            <a href="soli.html?id=${animal.id}">
+            <button> adotar </button>
+            </a>
+            <label class="adotar"><input type="button" name="adotar" value="${animal.id}"></label>
+
             `;
             listaCardpet.appendChild(article);
   });
@@ -124,4 +129,6 @@ if (animal) {
     </article>`;
   });
  }
+ const quantidade = document.getElementById("contAnimais");
+ quantidade.textContent = animais.length;
  
