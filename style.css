@@ -40,6 +40,18 @@ nav.homeNav {
     justify-content: center;
 }
 
+article.home-article {
+    background-color: #e6c4c4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.h1-section {
+    font-size: 36px;
+    color: #1e3b29;
+    background-color: #e6c4c4;
+    margin-bottom: 20px;
+}
 
 .butaolink {
     background-color: #e6c4c4;
