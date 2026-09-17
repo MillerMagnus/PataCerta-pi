@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mogra&display=swap" rel="stylesheet">
+
     <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +16,15 @@
 <body>
     <header class="catalogoHeader">
     <h1 class="caveat-700">Pata Certa</h1>
-        <h2 class="caveat-400">O lugar perfeito para encontrar um novo amigo</h2> 
+    <h2 class="caveat-400">O lugar perfeito para encontrar um novo amigo</h2> 
         <div class="limite"></div>
         <a href="home.html" class="marca">
         <span class="marca-pata" aria-hidden="true">🐾</span></a>
-    </div>
+        </div>
+    </header>
 
-    <nav aria-label="Navegação principal"   class="homeNav"> 
-        <button class="butaolink"><a href="home.html" data-pagina="inicio">Início</a></button>
-        <button class="butaolink"><a href="catalogo.html" data-pagina="catalogo">Catálogo</a></button>
-        <button class="butaolink"><a href="favoritos.html" data-pagina="favoritos">Favoritos <span class="contador-favoritos" data-contador-favoritos hidden>0</span></a></button>
-    </nav>
-</header>
+<main>
 
-    <h1>Catálogo</h1>
         <nav class="navPrincipal">
     <a href="home.html">Início</a>
     <a href="catalogo.html">Catálogo</a>
@@ -41,7 +41,7 @@
             <p class="slogan">Reunimos os bichanos resgatados pelas ONGs parceiras da nossa região num só lugar. Filtre por espécie, porte e marque uma visita em poucos cliques.</p>
             <div class="barrastatus">
                 <div class="status2">
-                    <div class="num" id="contAnimais">10</div>
+                    <div class="num" id="contAnimais"></div>
                     <div class="label">Disponíveis agora</div>
             </div>
             <div class="status2">
@@ -65,8 +65,25 @@
         <div class="pesquisar">
             <input type="search" id="pesquisar" placeholder="Buscar por nome ou raça">
         </div>
-            <section class="sectionpets">
+        <section class="sectionpets">
             <article class="cardpet" id="cardpet">
             </article>
         </section>
+</main>
+<footer class="rodape">
+    <div class="limite">
+        <div class="pilha">
+        <strong>Pata Certa</strong>
+        <p class="texto-suave">Portal de adoção responsável de animais.</p>
+        </div>
+        <nav aria-label="Links do rodapé">
+            <ul class="pilha">
+            <li><a href="catalogo.html" style="color: #eac9c9;">Ver catálogo</a></li>
+            <br>
+            <li><a href="solicitacoes.html" style="color: #eac9c9;">Minhas solicitações</a></li>
+            </ul>
+        </nav>
+        <p style="color: #ffff;">&copy; 2026 Pata Certa.</p>
+    </div>
+</footer>
 </body>
