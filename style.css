@@ -17,7 +17,7 @@
 }
 
 /*----------------------------------------------------------------*/
-/* HOME y INDEX */
+/* HOME, header, nav y footer */
 
 header.homeHeader {
     background-color: #1e3b29;
@@ -89,6 +89,8 @@ nav.homeNav {
     margin-top: 10px;
     justify-content: center;
 }
+
+/* divs y containers do home */
 
 .home-section {
     display: flex;
