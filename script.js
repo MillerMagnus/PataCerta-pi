@@ -262,6 +262,7 @@ const listaCardpet = document.querySelector("#cardpet");
   });
  });
   const quantidade = document.getElementById("contAnimais");
+  if (quantidade) {
  quantidade.textContent = animais.length;
   document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.querySelectorAll('input[name="favoritar"]');
@@ -272,10 +273,9 @@ const listaCardpet = document.querySelector("#cardpet");
         else {
           checkbox.checked = false;
       } 
-    }
-  )
-}
-  )
+    });
+});
+  }
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
