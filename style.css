@@ -292,6 +292,7 @@ input#pesquisar {
     font-size: 16px;
 }
 
+/* caixapet na verdade é o card individual */
 article.caixapet {
     background-color: #eac9c9;
     border: 1px solid #ffffff;
@@ -302,9 +303,14 @@ article.caixapet {
     width: fit-content;   
     height: 550px;
 }
+
+/* cardpet na verdade é o container */
 .cardpet {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .sectionpets {
