@@ -239,10 +239,9 @@ const listaCardpet = document.querySelector("#cardpet");
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="checkmark"></span>
             </label>
-            <a href="solicitacoes.html?id=${animal.id}">
+            <a href="formulario.html?id=${animal.id}">
             <button> adotar </button>
             </a>
-            <label class="adotar"><input type="button" name="adotar" value="${animal.id}"></label>
             `;
             listaCardpet.appendChild(article);
   });
@@ -262,6 +261,21 @@ const listaCardpet = document.querySelector("#cardpet");
      localStorage.setItem("favoritos",JSON.stringify(favoritos));
   });
  });
+  const quantidade = document.getElementById("contAnimais");
+ quantidade.textContent = animais.length;
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+    checkboxes.forEach(checkbox => {
+      const id = checkbox.value;  
+      if (favoritos.includes(id)) {
+        checkbox.checked = true; }
+        else {
+          checkbox.checked = false;
+      } 
+    }
+  )
+}
+  )
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -296,6 +310,5 @@ if (animal) {
     </article>`;
   });
  }
- const quantidade = document.getElementById("contAnimais");
- quantidade.textContent = animais.length;
+
  
