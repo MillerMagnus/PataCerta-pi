@@ -34,7 +34,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/nala.jpeg"
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/biscoito.jpeg"
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/bisteca.jpeg"
   },
   {
     id: 6,
@@ -67,9 +67,9 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/mia.jpeg"
   },
-   {
+  {
     id: 7,
     nome: "Odin",
     especie: "Cachorro",
@@ -78,7 +78,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/odin.jpeg"
   },
   {
     id: 8,
@@ -89,9 +89,9 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/gergolon.jpeg"
   },
-{
+  {
     id: 9,
     nome: "Nina",
     especie: "Gato",
@@ -100,7 +100,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Birigui",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/nina.jpeg"
   },
   {
     id: 10,
@@ -111,7 +111,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Birigui",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/paçoca.jpeg"
   },
   {
     id: 11,
@@ -144,7 +144,7 @@ const animais = [
     sexo: "Macho",
     cidade: "birigui",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/banguela.jpeg"
   },
   {
     id: 14,
@@ -155,7 +155,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/diego-roberto.jpeg"
   },
   {
     id: 15,
@@ -170,14 +170,14 @@ const animais = [
   },
   {
     id: 16,
-    nome: "Menina",
+    nome: "Minina",
     especie: "Cachorro",
     porte: "Pequeno",
     idade: "8 anos",
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/Minina.jpeg"
   },
   {
     id: 17,
@@ -188,7 +188,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/Ivy.jpeg"
   },
 {
     id: 18,
@@ -199,7 +199,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/Vênus.jpeg"
   },
   {
     id: 19,
