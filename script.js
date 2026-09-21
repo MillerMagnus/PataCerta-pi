@@ -310,5 +310,45 @@ if (animal) {
     </article>`;
   });
  }
+ const formulario = document.querySelector("#formAdocao");  
+  if (formulario) {
+    formulario.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const dadosFormulario = new FormData(formulario);
+      const solicitacao = object.fromEntries(dadosFormulario.entries());
+      let solicitacoes = JSON.parse(localStorage.getItem("solicitacoes"))
+      solitacoes.push(solicitacoes);
+      localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
+      alert("Solicitação enviada com sucesso!");
+      window.location.href = "solicitacoes.html";
+    } );
+  }
+  const ListaSoli = document.querySelector("#solis");
+  if (ListaSoli) {
+    const solicitacoes = JSON.parse(localStorage.getItem("solicitacoes")) || [];
+    solitacoes.forEach(solicitacao, index => { 
+      const article = document.createElement("article");
+      article.innerHTML = `
+        <h2>solicitacao ${index + 1}</h2>
+        <p><strong>Nome:</strong>${solicitacao.nome}</p>
+        <p><strong>Email:</strong>${solicitacao.email}</p>
+        <p><strong>Telefone:</strong>${solicitacao.telefone}</p>
+        <p><strong>Endereço:</strong>${solicitacao.endereco}</p>
+        <p><strong>Animal:</strong>${solicitacao.animal}</p>
+        <p><strong>Já teve animal:</strong>${solicitacao.pergunta1}</p>
+        <p><strong>Experiencia</strong>${solicitacao.pergunta2}</p>
+        <p><strong>Custos veterinarios:</strong>${solicitacao.pergunta3}</p>
+        <p><strong>Tempo e atenção:</strong>${solicitacao.pergunta4}</p>
+        <p><strong>Espaço adequado</strong>${solicitacao.pergunta8}</p>
+        <p><strong>Portão fechado:</strong>${solicitacao.pergunta10}</p>
+         <p><strong>Todos concordam</strong>${solicitacao.pergunta12}</p>
+        <p><strong>Criança em casa:</strong>${solicitacao.pergunta13}</p>
+        `;
+        ListaSoli.appendChild(article);
+    });
+  }
+        
+        
+        
 
  
