@@ -198,8 +198,6 @@ header.catalogoHeader {
     justify-content: space-around;
 }
 
-
-
 nav.navPrincipal {
     background-color: #1e3b29;
     color: #e6c4c4;
@@ -405,6 +403,7 @@ section.sectionpets {
 /*----------------------------------------------------------------*/
 /* FORMULÁRIO */
 
+
 form.formulario {
     display: flex;
     flex-direction: column;
@@ -455,6 +454,7 @@ form.formulario button {
     margin-top: 10px;
     align-self: center;
 }
+
 
 /*----------------------------------------------------------------*/
 /* --- */
