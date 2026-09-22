@@ -353,14 +353,14 @@ display: none;
 
 .favoritar .star {
 font-size: 28px;
-color: #8a7f5c;
+color: #662929;
 cursor: pointer;    
 user-select: none;
 transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .favoritar input:checked + .star {
-color: gold;
+color: red;
 transform: scale(1.15);
 }
 

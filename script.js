@@ -237,7 +237,7 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="star">★</span>
+              <span class="star">♥</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
             <button> adotar </button>
