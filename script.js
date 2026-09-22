@@ -246,24 +246,24 @@ const listaCardpet = document.querySelector("#cardpet");
             listaCardpet.appendChild(article);
   });
 }
- const checkboxes = document.querySelectorAll('input[name="favoritar"]');
- checkboxes.forEach(checkbox => {
+const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+checkboxes.forEach(checkbox => {
   checkbox.addEventListener("change",() => {
     const id = checkbox.value;
-     if ( checkbox.checked){
+    if ( checkbox.checked){
       if (!favoritos.includes(id)) {
         favoritos.push(id);
       }
-     }
-     else {
+    }
+    else {
       favoritos = favoritos.filter( favorito => favorito !==id);
-     }
-     localStorage.setItem("favoritos",JSON.stringify(favoritos));
+    }
+    localStorage.setItem("favoritos",JSON.stringify(favoritos));
   });
- });
+});
   const quantidade = document.getElementById("contAnimais");
   if (quantidade) {
- quantidade.textContent = animais.length;
+    quantidade.textContent = animais.length;
   document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.querySelectorAll('input[name="favoritar"]');
     checkboxes.forEach(checkbox => {
@@ -299,8 +299,8 @@ if (animal) {
 }
 }
 
- const paginaFav = document.querySelector("#favoritos");
- if (paginaFav) {
+const paginaFav = document.querySelector("#favoritos");
+if (paginaFav) {
   const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
   animaisFav.forEach(animal => {
     paginaFav.innerHTML += `<article>
@@ -309,8 +309,8 @@ if (animal) {
       <p>${animal.especie}</p>
     </article>`;
   });
- }
- const formulario = document.querySelector("#formAdocao");  
+}
+const formulario = document.querySelector("#formAdocao");  
   if (formulario) {
     formulario.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -341,14 +341,9 @@ if (animal) {
         <p><strong>Tempo e atenção:</strong>${solicitacao.pergunta4}</p>
         <p><strong>Espaço adequado</strong>${solicitacao.pergunta8}</p>
         <p><strong>Portão fechado:</strong>${solicitacao.pergunta10}</p>
-         <p><strong>Todos concordam</strong>${solicitacao.pergunta12}</p>
+        <p><strong>Todos concordam</strong>${solicitacao.pergunta12}</p>
         <p><strong>Criança em casa:</strong>${solicitacao.pergunta13}</p>
         `;
         ListaSoli.appendChild(article);
     });
   }
-        
-        
-        
-
- 

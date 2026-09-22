@@ -210,9 +210,14 @@ nav.navPrincipal {
 }
 
 nav.navPrincipal a {
-    color: #e6c4c4;
+    background-color: #e6c4c4;
+    color: #1e3b29;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    font-weight: 600;
+    margin: 5px;
 }
 
 nav.navPrincipal a:hover {
