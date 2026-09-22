@@ -310,40 +310,93 @@ if (paginaFav) {
     </article>`;
   });
 }
-const formulario = document.querySelector("#formAdocao");  
-  if (formulario) {
-    formulario.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const dadosFormulario = new FormData(formulario);
-      const solicitacao = object.fromEntries(dadosFormulario.entries());
-      let solicitacoes = JSON.parse(localStorage.getItem("solicitacoes"))
-      solitacoes.push(solicitacoes);
-      localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
-      alert("Solicitação enviada com sucesso!");
-      window.location.href = "solicitacoes.html";
-    } );
-  }
-  const ListaSoli = document.querySelector("#solis");
-  if (ListaSoli) {
-    const solicitacoes = JSON.parse(localStorage.getItem("solicitacoes")) || [];
-    solitacoes.forEach(solicitacao, index => { 
-      const article = document.createElement("article");
-      article.innerHTML = `
-        <h2>solicitacao ${index + 1}</h2>
-        <p><strong>Nome:</strong>${solicitacao.nome}</p>
-        <p><strong>Email:</strong>${solicitacao.email}</p>
-        <p><strong>Telefone:</strong>${solicitacao.telefone}</p>
-        <p><strong>Endereço:</strong>${solicitacao.endereco}</p>
-        <p><strong>Animal:</strong>${solicitacao.animal}</p>
-        <p><strong>Já teve animal:</strong>${solicitacao.pergunta1}</p>
-        <p><strong>Experiencia</strong>${solicitacao.pergunta2}</p>
-        <p><strong>Custos veterinarios:</strong>${solicitacao.pergunta3}</p>
-        <p><strong>Tempo e atenção:</strong>${solicitacao.pergunta4}</p>
-        <p><strong>Espaço adequado</strong>${solicitacao.pergunta8}</p>
-        <p><strong>Portão fechado:</strong>${solicitacao.pergunta10}</p>
-        <p><strong>Todos concordam</strong>${solicitacao.pergunta12}</p>
-        <p><strong>Criança em casa:</strong>${solicitacao.pergunta13}</p>
-        `;
-        ListaSoli.appendChild(article);
-    });
-  }
+const formulario = document.querySelector("#formAdocao");
+if (formulario) {
+  formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const dadosFormulario = new FormData(formulario);
+    const solicitacao = Object.fromEntries(dadosFormulario.entries());
+    const params = new URLSearchParams(window.location.search);
+    const idAnimal = Number(params.get("id"));
+    const animal = animais.find(animal => animal.id === idAnimal);
+    if (animal) {
+      solicitacao.animalId = animal.id;
+      solicitacao.animalNome = animal.nome;
+      solicitacao.animalEspecie = animal.especie;
+      solicitacao.animalIdade = animal.idade;
+      solicitacao.animalImagem = animal.imagem;
+      solicitacao.animalCidade = animal.cidade;
+    }
+    let solicitacoes = JSON.parse(
+      localStorage.getItem("solicitacoes")
+    ) || [];
+    solicitacoes.push(solicitacao);
+    localStorage.setItem(
+      "solicitacoes",
+      JSON.stringify(solicitacoes)
+    );
+    alert("Solicitação enviada com sucesso!");
+    window.location.href = "solicitacoes.html";
+  });
+}
+const ListaSoli = document.querySelector("#solis");
+
+if (ListaSoli) {
+  const solicitacoes =
+    JSON.parse(localStorage.getItem("solicitacoes")) || [];
+
+  solicitacoes.forEach((solicitacao, index) => {
+    const article = document.createElement("article");
+
+    article.className = "card-solicitacao";
+
+    article.innerHTML = `
+      <div class="card-animal">
+
+        ${
+          solicitacao.animalImagem
+            ? `<img src="${solicitacao.animalImagem}" alt="${solicitacao.animalNome}">`
+            : `<div class="sem-imagem">🐾</div>`
+        }
+
+        <div class="info-animal">
+          <h2>${solicitacao.animalNome || "Animal não especificado"}</h2>
+
+          <p>
+            <strong>Espécie:</strong>
+            ${solicitacao.animalEspecie || "-"}
+          </p>
+
+          <p>
+            <strong>Idade:</strong>
+            ${solicitacao.animalIdade || "-"}
+          </p>
+
+          <p>
+            <strong>Cidade:</strong>
+            ${solicitacao.animalCidade || "-"}
+          </p>
+
+          <p>
+            <strong>Status:</strong>
+            Solicitação enviada
+          </p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="dados-solicitante">
+        <h3>Dados do solicitante</h3>
+
+        <p><strong>Nome:</strong> ${solicitacao.nome}</p>
+        <p><strong>Email:</strong> ${solicitacao.email}</p>
+        <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
+        <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
+      </div>
+    `;
+
+    ListaSoli.appendChild(article);
+  });
+}
