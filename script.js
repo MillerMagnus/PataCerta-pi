@@ -23,7 +23,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem:""
+    imagem:"/images/thor.jpeg"
   },
   {
     id: 3,
@@ -122,7 +122,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/chico-moedas.jpeg"
   },
   {
     id: 12,
@@ -133,7 +133,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/maya.jpeg"
   },
   {
     id: 13,
@@ -166,7 +166,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/alice.jpeg"
   },
   {
     id: 16,
@@ -210,7 +210,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/megan-maria.jpeg"
   },
 
 
