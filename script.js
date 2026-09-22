@@ -237,7 +237,7 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="checkmark"></span>
+              <span class="star">★</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
             <button> adotar </button>
@@ -383,7 +383,7 @@ if (ListaSoli) {
           </p>
         </div>
 
-      </div>
+      
 
       <hr>
 
@@ -394,6 +394,7 @@ if (ListaSoli) {
         <p><strong>Email:</strong> ${solicitacao.email}</p>
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
+      </div>
       </div>
     `;
 
