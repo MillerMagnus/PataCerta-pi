@@ -383,7 +383,7 @@ if (ListaSoli) {
           </p>
         </div>
 
-      </div>
+      
 
       <hr>
 
@@ -394,6 +394,7 @@ if (ListaSoli) {
         <p><strong>Email:</strong> ${solicitacao.email}</p>
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
+      </div>
       </div>
     `;
 
