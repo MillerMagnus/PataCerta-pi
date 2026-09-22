@@ -457,5 +457,39 @@ form.formulario button {
     align-self: center;
 }
 
-/*----------------------------------------------------------------*/
+/*---------------- solicitações------------------------------------------------*/
+
 /* --- */
+.solicitacoes {
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+ 
+}
+.card-animal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.card-animal img {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+}
+.solis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+card-solicitacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+  
