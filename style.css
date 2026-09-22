@@ -154,6 +154,13 @@ nav{
     text-align: center;
 }
 
+.texto-suave {
+    font-size: 18px;
+    color: #1e3b29;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
 /* divs y containers do home */
 
 .home-section {
@@ -181,6 +188,18 @@ nav{
     font-size: 20px;
     color: #1e3b29;
     margin-bottom: 20px;
+}
+
+.botao-primario {
+    background-color: #1e3b29;
+    color: #e6c4c4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    
 }
 
 
@@ -326,16 +345,21 @@ article.caixapet {
     margin-bottom: 10px;
 }
 
-.favoritar {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-}
 .favoritar input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+display: none;
+}
+
+.favoritar .star {
+font-size: 28px;
+color: #8a7f5c;
+cursor: pointer;    
+user-select: none;
+transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.favoritar input:checked + .star {
+color: gold;
+transform: scale(1.15);
 }
 
 .checkmark {
@@ -346,26 +370,9 @@ article.caixapet {
     width: 34px;
     background-color: #ccc;
     border-radius: 34px;
+    
 }
-.favoritar input:checked ~ .checkmark {
-    background-color: #da1f1f;
-}
-.favoritar .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-.favoritar input:checked ~ .checkmark:after {
-    display: block;
-}
-.favoritar .checkmark:after {
-    left: 10px;
-    top: 10px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgb(250, 250, 251);
-}
+
 
 /*----------------------------------------------------------------*/
 /* PERFILPET */
@@ -455,6 +462,45 @@ form.formulario button {
     align-self: center;
 }
 
+<<<<<<< HEAD
 
 /*----------------------------------------------------------------*/
 /* --- */
+=======
+/*---------------- solicitações------------------------------------------------*/
+
+/* --- */
+.solicitacoes {
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+ 
+}
+.card-animal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.card-animal img {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+}
+.solis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+card-solicitacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+  
+>>>>>>> 130474dc208cd0636c905ccfd6d97901dc4faf99
