@@ -377,10 +377,6 @@ article.caixapet {
     transition: transform 0.3s ease;
 }
 
-<<<<<<< HEAD
-article.caixapet:hover {
-    transform: translateY(-8px);
-=======
 /* cardpet na verdade é o container */
 .cardpet {
     display: flex;
@@ -397,7 +393,6 @@ article.caixapet:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
->>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 .caixapet img {
