@@ -283,7 +283,6 @@ div.filter-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     gap: 16px;
     background-color: #e6c4c4;
     padding: 20px;
@@ -292,16 +291,6 @@ div.filter-bar {
 button.filtro {
     background-color: #1e3b29;
     color: #e6c4c4;
-=======
-    background-color: #c1e0d8;
-    padding: 20px;
-}
-
-
-button.filtro{
-    background-color: #5ec7b5;
-    color: #1e3b29;
->>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -323,13 +312,8 @@ div.pesquisar {
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
     background-color: #e6c4c4;
     padding: 10px 20px 20px;
-=======
-    background-color: #c1e0d8;
-    padding: 10px;
->>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 input#pesquisar {
