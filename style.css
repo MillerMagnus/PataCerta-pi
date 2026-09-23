@@ -209,8 +209,8 @@ nav{
 
 
 header.catalogoHeader {
-    background-color: #1e3b29;
-    color: #e6c4c4;
+    background-color: #c1e0d8;
+    color: #1e3b29;
     height: 100px;
     display: flex;
     align-items: stretch;
@@ -218,7 +218,7 @@ header.catalogoHeader {
 }
 
 nav.navPrincipal {
-    background-color: #1e3b29;
+    background-color: #c1e0d8;
     color: #e6c4c4;
     text-align: center;
     display: flex;
@@ -289,6 +289,7 @@ div.filter-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     gap: 16px;
     background-color: #e6c4c4;
     padding: 20px;
@@ -297,6 +298,16 @@ div.filter-bar {
 button.filtro {
     background-color: #1e3b29;
     color: #e6c4c4;
+=======
+    background-color: #c1e0d8;
+    padding: 20px;
+}
+
+
+button.filtro{
+    background-color: #5ec7b5;
+    color: #1e3b29;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -318,8 +329,13 @@ div.pesquisar {
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
     background-color: #e6c4c4;
     padding: 10px 20px 20px;
+=======
+    background-color: #c1e0d8;
+    padding: 10px;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 input#pesquisar {
@@ -367,8 +383,27 @@ article.caixapet {
     transition: transform 0.3s ease;
 }
 
+<<<<<<< HEAD
 article.caixapet:hover {
     transform: translateY(-8px);
+=======
+/* cardpet na verdade é o container */
+.cardpet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #80928e;
+    margin-top: 0px;
+}
+
+.sectionpets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 .caixapet img {
