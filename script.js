@@ -403,17 +403,9 @@ if (ListaSoli) {
     ListaSoli.appendChild(article);
   });
 }
- const botaofiltro = document.querySelectorAll(".filtro");
  const barrapesquisa = document.getElementById("pesquisar");
  let filtroAtual = "all";
- botaofiltro.forEach(botao => {
-    botao.addEventListener("click", () => {
-      filtroAtual = botao.dataset.filtro;
-      botaofiltro.forEach(btn => btn.setAttribute("aria-pressed", "false"));
-      botao.setAttribute("aria-pressed", "true");
-      aplicarFiltros();
-    });
- });
+ 
  barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
  });
