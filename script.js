@@ -5,14 +5,13 @@ const animais = [
   {
     id: 1,
     nome: "Shadow",
-    especie: "Cachorro",
+    especie: "cachorro",
     porte: "Pequeno",
     idade: "2 anos",
     sexo: "Macho",
     cidade: "Guararapes",
     status: "Disponível",
-    imagem: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/Tomilho-Lucy-M.jpg",
-    descricao: "Luna é uma gata muito carinhosa e brincalhona. Ela adora receber atenção e se dá bem com outros animais. Ela foi encontrada abandonada .",
+    imagem: "/images/shadow.jpeg",
   },
   {
     id: 2,
@@ -23,7 +22,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem:""
+    imagem:"/images/thor.jpeg"
   },
   {
     id: 3,
@@ -122,7 +121,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/chico-moedas.jpeg"
   },
   {
     id: 12,
@@ -133,7 +132,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/maya.jpeg"
   },
   {
     id: 13,
@@ -166,7 +165,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/alice.jpeg"
   },
   {
     id: 16,
@@ -210,7 +209,7 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: ""
+    imagem: "/images/megan-maria.jpeg"
   },
 
 
@@ -237,33 +236,38 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
-              <span class="checkmark"></span>
+              <span class="star">♥</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
             <button> adotar </button>
             </a>
             `;
             listaCardpet.appendChild(article);
+              
+  
   });
 }
- const checkboxes = document.querySelectorAll('input[name="favoritar"]');
- checkboxes.forEach(checkbox => {
+  
+
+
+const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+checkboxes.forEach(checkbox => {
   checkbox.addEventListener("change",() => {
     const id = checkbox.value;
-     if ( checkbox.checked){
+    if ( checkbox.checked){
       if (!favoritos.includes(id)) {
         favoritos.push(id);
       }
-     }
-     else {
+    }
+    else {
       favoritos = favoritos.filter( favorito => favorito !==id);
-     }
-     localStorage.setItem("favoritos",JSON.stringify(favoritos));
+    }
+    localStorage.setItem("favoritos",JSON.stringify(favoritos));
   });
- });
+});
   const quantidade = document.getElementById("contAnimais");
   if (quantidade) {
- quantidade.textContent = animais.length;
+    quantidade.textContent = animais.length;
   document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.querySelectorAll('input[name="favoritar"]');
     checkboxes.forEach(checkbox => {
@@ -299,8 +303,8 @@ if (animal) {
 }
 }
 
- const paginaFav = document.querySelector("#favoritos");
- if (paginaFav) {
+const paginaFav = document.querySelector("#favoritos");
+if (paginaFav) {
   const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
   animaisFav.forEach(animal => {
     paginaFav.innerHTML += `<article>
@@ -309,46 +313,112 @@ if (animal) {
       <p>${animal.especie}</p>
     </article>`;
   });
- }
- const formulario = document.querySelector("#formAdocao");  
-  if (formulario) {
-    formulario.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const dadosFormulario = new FormData(formulario);
-      const solicitacao = object.fromEntries(dadosFormulario.entries());
-      let solicitacoes = JSON.parse(localStorage.getItem("solicitacoes"))
-      solitacoes.push(solicitacoes);
-      localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
-      alert("Solicitação enviada com sucesso!");
-      window.location.href = "solicitacoes.html";
-    } );
-  }
-  const ListaSoli = document.querySelector("#solis");
-  if (ListaSoli) {
-    const solicitacoes = JSON.parse(localStorage.getItem("solicitacoes")) || [];
-    solitacoes.forEach(solicitacao, index => { 
-      const article = document.createElement("article");
-      article.innerHTML = `
-        <h2>solicitacao ${index + 1}</h2>
-        <p><strong>Nome:</strong>${solicitacao.nome}</p>
-        <p><strong>Email:</strong>${solicitacao.email}</p>
-        <p><strong>Telefone:</strong>${solicitacao.telefone}</p>
-        <p><strong>Endereço:</strong>${solicitacao.endereco}</p>
-        <p><strong>Animal:</strong>${solicitacao.animal}</p>
-        <p><strong>Já teve animal:</strong>${solicitacao.pergunta1}</p>
-        <p><strong>Experiencia</strong>${solicitacao.pergunta2}</p>
-        <p><strong>Custos veterinarios:</strong>${solicitacao.pergunta3}</p>
-        <p><strong>Tempo e atenção:</strong>${solicitacao.pergunta4}</p>
-        <p><strong>Espaço adequado</strong>${solicitacao.pergunta8}</p>
-        <p><strong>Portão fechado:</strong>${solicitacao.pergunta10}</p>
-         <p><strong>Todos concordam</strong>${solicitacao.pergunta12}</p>
-        <p><strong>Criança em casa:</strong>${solicitacao.pergunta13}</p>
-        `;
-        ListaSoli.appendChild(article);
-    });
-  }
-        
-        
-        
+}
+const formulario = document.querySelector("#formAdocao");
+if (formulario) {
+  formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const dadosFormulario = new FormData(formulario);
+    const solicitacao = Object.fromEntries(dadosFormulario.entries());
+    const params = new URLSearchParams(window.location.search);
+    const idAnimal = Number(params.get("id"));
+    const animal = animais.find(animal => animal.id === idAnimal);
+    if (animal) {
+      solicitacao.animalId = animal.id;
+      solicitacao.animalNome = animal.nome;
+      solicitacao.animalEspecie = animal.especie;
+      solicitacao.animalIdade = animal.idade;
+      solicitacao.animalImagem = animal.imagem;
+      solicitacao.animalCidade = animal.cidade;
+    }
+    let solicitacoes = JSON.parse(
+      localStorage.getItem("solicitacoes")
+    ) || [];
+    solicitacoes.push(solicitacao);
+    localStorage.setItem(
+      "solicitacoes",
+      JSON.stringify(solicitacoes)
+    );
+    alert("Solicitação enviada com sucesso!");
+    window.location.href = "solicitacoes.html";
+  });
+}
+const ListaSoli = document.querySelector("#solis");
 
- 
+if (ListaSoli) {
+  const solicitacoes =
+    JSON.parse(localStorage.getItem("solicitacoes")) || [];
+
+  solicitacoes.forEach((solicitacao, index) => {
+    const article = document.createElement("article");
+
+    article.className = "card-solicitacao";
+
+    article.innerHTML = `
+      <div class="card-animal">
+
+        ${
+          solicitacao.animalImagem
+            ? `<img src="${solicitacao.animalImagem}" alt="${solicitacao.animalNome}">`
+            : `<div class="sem-imagem">🐾</div>`
+        }
+
+        <div class="info-animal">
+          <h2>${solicitacao.animalNome || "Animal não especificado"}</h2>
+
+          <p>
+            <strong>Espécie:</strong>
+            ${solicitacao.animalEspecie || "-"}
+          </p>
+
+          <p>
+            <strong>Idade:</strong>
+            ${solicitacao.animalIdade || "-"}
+          </p>
+
+          <p>
+            <strong>Cidade:</strong>
+            ${solicitacao.animalCidade || "-"}
+          </p>
+
+          <p>
+            <strong>Status:</strong>
+            Solicitação enviada
+          </p>
+        </div>
+
+      
+
+      <hr>
+
+      <div class="dados-solicitante">
+        <h3>Dados do solicitante</h3>
+
+        <p><strong>Nome:</strong> ${solicitacao.nome}</p>
+        <p><strong>Email:</strong> ${solicitacao.email}</p>
+        <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
+        <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
+      </div>
+      </div>
+    `;
+
+    ListaSoli.appendChild(article);
+  });
+}
+
+const animaisCachorro = animais.filter(animal => animal.especie.toLowerCase() === "cachorro");
+const animaisGato = animais.filter(animal => animal.especie.toLowerCase() === "gato");
+const animaisOutros = animais.filter(animal => animal.especie.toLowerCase() !== "cachorro" && animal.especie.toLowerCase() !== "gato");
+const animaisFemea = animais.filter(animal => animal.sexo.toLowerCase() === "fêmea");
+const animaisMacho = animais.filter(animal => animal.sexo.toLowerCase() === "macho");
+const animaisPequeno = animais.filter(animal => animal.porte.toLowerCase() === "pequeno");
+const animaisMedio = animais.filter(animal => animal.porte.toLowerCase() === "medio");
+const animaisGrande = animais.filter(animal => animal.porte.toLowerCase() === "grande");
+const animaisFilhote = animais.filter(animal => animal.idade.toLowerCase().includes("meses"));
+const animaisAdulto = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && !animal.idade.toLowerCase().includes("meses"));
+const animaisIdoso = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && parseInt(animal.idade) >= 7);
+const botaoCachorro = document.getElementById("cães");
+const botaoGato = document.getElementById("gatos");
+ botaoCachorro.addEventListener("click", () => {
+  mostrarAnimais(animaisCachorro);
+ });
