@@ -220,7 +220,9 @@ let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 /*----------------------------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
-  if (listaCardpet) {
+function mostrarAnimais(animais) {
+  if (!listaCardpet)return;
+  listaCardpet.innerHTML = "";
   animais.forEach(animal => {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
@@ -243,12 +245,8 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             `;
             listaCardpet.appendChild(article);
-              
-  
   });
 }
-  
-
 
 const checkboxes = document.querySelectorAll('input[name="favoritar"]');
 checkboxes.forEach(checkbox => {
@@ -298,7 +296,6 @@ if (animal) {
     <p>${animal.sexo}</p>
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
-    <p>${animal.descricao}</p>
   `;
 }
 }
@@ -307,7 +304,7 @@ const paginaFav = document.querySelector("#favoritos");
 if (paginaFav) {
   const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
   animaisFav.forEach(animal => {
-    paginaFav.innerHTML += `<article>
+    paginaFav.innerHTML += `<article class="card-favorito">
       <img src = "${animal.imagem}" alt="${animal.nome}"></img>
       <h2> ${animal.nome}</h2>
       <p>${animal.especie}</p>
@@ -420,5 +417,25 @@ const animaisIdoso = animais.filter(animal => animal.idade.toLowerCase().include
 const botaoCachorro = document.getElementById("cães");
 const botaoGato = document.getElementById("gatos");
  botaoCachorro.addEventListener("click", () => {
-  mostrarAnimais(animaisCachorro);
+  (animaisCachorro);
  });
+ const barrapesquisa = document.getElementById("pesquisar");
+ barrapesquisa.addEventListener("input", () => {
+  const termoPesquisa = barrapesquisa.value.toLowerCase();
+  const listapets = document.querySelector("#cardpet");
+  if (listaCardpet) {
+    listapets.forEach(animal => {
+    if (animal.nome.toLowerCase().includes(termoPesquisa) || animal.especie.toLowerCase().trim().includes(termoPesquisa)) {
+      cardpet.style.display = "flex";
+    }
+    else {
+      cardpet.style.display = "none";
+    }
+  });
+   }
+  });
+
+  const animaisFiltrados = animais.filter(animal => {
+    return animal.nome.toLowerCase().includes(termoPesquisa) || animal.especie.toLowerCase().trim().includes(termoPesquisa);
+  });
+  
