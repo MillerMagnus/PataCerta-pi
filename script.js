@@ -11,7 +11,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Guararapes",
     status: "Disponível",
-    imagem: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/Tomilho-Lucy-M.jpg",
+    imagem: "/images/shadow.jpeg",
     descricao: "Luna é uma gata muito carinhosa e brincalhona. Ela adora receber atenção e se dá bem com outros animais. Ela foi encontrada abandonada .",
   },
   {
