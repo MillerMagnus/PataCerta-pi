@@ -131,10 +131,10 @@ h3 {
 
 .rodape{
     background-color:#1e3b29;
-    margin-top: 60px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
 nav{
@@ -177,7 +177,6 @@ nav{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin-bottom: 40px;
 }
 .h1-article {
     font-size: 36px;
@@ -227,13 +226,13 @@ nav.navPrincipal {
 }
 
 nav.navPrincipal a {
-    background-color: #e6c4c4;
+    background-color: #5ec7b5;
     color: #1e3b29;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin: 5px;
 }
 
@@ -242,24 +241,34 @@ nav.navPrincipal a:hover {
 }
 
 div.caixaSlogan {
-    background-color: #eac9c9;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 0 auto;
+    margin: 30px auto;
+}
+
+.introCatalogo {
+    font-size: 20px;
+    color: #1e3b29;
+    text-align: center;
+    background-color: #80928e;
+    padding: 20px;
 }
 
 h1.slogan {
     font-size: 44px;
     color: #1e3b29;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
+    font-size: 44px;
+    font-family: "Caveat", cursive;
 }
 p.slogan {
     font-size: 25px;
     color: #1e3b29;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -279,9 +288,10 @@ div.filter-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    background-color: #e6c4c4;
+    padding: 20px;
 }
+
 
 button.filtro{
     background-color: #1e3b29;
@@ -296,8 +306,9 @@ button.filtro{
 div.pesquisar {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e6c4c4;
+    padding: 10px;
 }
 
 input#pesquisar {
@@ -334,8 +345,8 @@ article.caixapet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
     flex-direction: column;
+    background-color: #0c648a;
 }
 
 .caixapet img {
