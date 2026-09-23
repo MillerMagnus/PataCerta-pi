@@ -207,6 +207,7 @@ nav{
 /*----------------------------------------------------------------*/
 /* CATALOGO */
 
+
 header.catalogoHeader {
     background-color: #c1e0d8;
     color: #1e3b29;
@@ -262,9 +263,9 @@ h1.slogan {
     color: #1e3b29;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 44px;
     font-family: "Caveat", cursive;
 }
+
 p.slogan {
     font-size: 25px;
     color: #1e3b29;
@@ -278,7 +279,7 @@ div.barrastatus {
     margin-top: 20px;
 }
 
-div.num{
+div.num {
     font-size: 35px;
     color: #1e3b29;
     text-align: center;
@@ -286,8 +287,18 @@ div.num{
 
 div.filter-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+    gap: 16px;
+    background-color: #e6c4c4;
+    padding: 20px;
+}
+
+button.filtro {
+    background-color: #1e3b29;
+    color: #e6c4c4;
+=======
     background-color: #c1e0d8;
     padding: 20px;
 }
@@ -296,41 +307,86 @@ div.filter-bar {
 button.filtro{
     background-color: #5ec7b5;
     color: #1e3b29;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+button.filtro:hover {
+    transform: scale(1.05);
+}
+
+button.filtro[aria-pressed="true"] {
+    background-color: #5ec7b5;
+    color: #1e3b29;
 }
 
 div.pesquisar {
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
+    background-color: #e6c4c4;
+    padding: 10px 20px 20px;
+=======
     background-color: #c1e0d8;
     padding: 10px;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 input#pesquisar {
     width: 100%;
+    max-width: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 
-/* caixapet na verdade é o card individual */
+.sectionpets {
+    display: flex;
+    flex-direction: column;
+    background-color: #0c648a;
+    padding: 30px 0;
+}
+
+.cardpet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 40px 30px;
+    overflow-x: auto;
+    background-color: #c9e0ea;
+    box-sizing: border-box;
+}
+
 article.caixapet {
+    position: relative;
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
     background-color: #c9eae6;
     border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px;
+    margin: 0;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    width: fit-content;   
-    height: 550px;
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
+<<<<<<< HEAD
+article.caixapet:hover {
+    transform: translateY(-8px);
+=======
 /* cardpet na verdade é o container */
 .cardpet {
     display: flex;
@@ -347,30 +403,102 @@ article.caixapet {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
+>>>>>>> 7db7c6d3dca32c53c0d98b0c24fac5ac2ef0bcc2
 }
 
 .caixapet img {
-    width: auto;
-    height: 75%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.caixapet h2,
+.caixapet h3 {
+    font-family: "Caveat", cursive;
+    font-size: 32px;
+    color: #1e3b29;
+    margin: 0 0 6px;
+}
+
+.caixapet p {
+    font-size: 16px;
+    color: #1e3b29;
+    margin: 0 0 6px;
+}
+
+.caixapet button {
+    width: 100%;
+    background-color: #1e3b29;
+    color: #e6c4c4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: transform 0.2s ease;
+}
+
+.caixapet a {
+    display: block;
+}
+
+.caixapet a[href^="formulario"] button {
+    background-color: #5ec7b5;
+    color: #1e3b29;
+}
+
+.caixapet button:hover {
+    transform: scale(1.03);
+}
+
+.caixapet .favoritar {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #e6c4c4;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .favoritar input {
-display: none;
+    display: none;
 }
 
 .favoritar .star {
-font-size: 28px;
-color: #662929;
-cursor: pointer;    
-user-select: none;
-transition: color 0.2s ease, transform 0.2s ease;
+    font-size: 28px;
+    color: #662929;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .favoritar input:checked + .star {
-color: red;
-transform: scale(1.15);
+    color: red;
+    transform: scale(1.15);
+}
+
+.caixapet .favoritar {
+    cursor: pointer;
+}
+
+.caixapet .favoritar .star {
+    font-family: Arial, sans-serif;
+}
+
+.caixapet .favoritar:hover .star {
+    transform: scale(1.15);
+}
+
+.caixapet .favoritar input:checked + .star {
+    color: red;
+    transform: scale(1.15);
 }
 
 .checkmark {
@@ -381,7 +509,25 @@ transform: scale(1.15);
     width: 34px;
     background-color: #ccc;
     border-radius: 34px;
-    
+}
+
+nav.navPrincipal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+}
+
+.cardpet {
+    padding: 20px;
+}
+
+.article.caixapet {
+    flex: 0 0 260px;
+    width: 260px;
+}
+
+.caixapet img {
+    height: 240px;
 }
 
 
@@ -414,15 +560,8 @@ section.sectionpets {
 /*----------------------------------------------------------------*/
 /* FAVORITOS */
 
-
 <<<<<<< HEAD
-=======
-
-
-
-/*----------------------------------------------------------------*/
-/* FORMULÁRIO */
-
+=======  
 
 >>>>>>> 2df2612744e8640c9a2f6e7a8d8289a360c9761a
 /*----------------------------------------------------------------*/
