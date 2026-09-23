@@ -247,6 +247,7 @@ function mostrarAnimais(animais) {
             listaCardpet.appendChild(article);
   });
 }
+mostrarAnimais(animais);
 
 const checkboxes = document.querySelectorAll('input[name="favoritar"]');
 checkboxes.forEach(checkbox => {
