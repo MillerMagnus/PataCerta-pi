@@ -5,14 +5,13 @@ const animais = [
   {
     id: 1,
     nome: "Shadow",
-    especie: "Gato",
+    especie: "cachorro",
     porte: "Pequeno",
     idade: "2 anos",
     sexo: "Macho",
     cidade: "Guararapes",
     status: "Disponível",
     imagem: "/images/shadow.jpeg",
-    descricao: "Luna é uma gata muito carinhosa e brincalhona. Ela adora receber atenção e se dá bem com outros animais. Ela foi encontrada abandonada .",
   },
   {
     id: 2,
