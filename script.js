@@ -403,40 +403,32 @@ if (ListaSoli) {
     ListaSoli.appendChild(article);
   });
 }
-
-const animaisCachorro = animais.filter(animal => animal.especie.toLowerCase() === "cachorro");
-const animaisGato = animais.filter(animal => animal.especie.toLowerCase() === "gato");
-const animaisOutros = animais.filter(animal => animal.especie.toLowerCase() !== "cachorro" && animal.especie.toLowerCase() !== "gato");
-const animaisFemea = animais.filter(animal => animal.sexo.toLowerCase() === "fêmea");
-const animaisMacho = animais.filter(animal => animal.sexo.toLowerCase() === "macho");
-const animaisPequeno = animais.filter(animal => animal.porte.toLowerCase() === "pequeno");
-const animaisMedio = animais.filter(animal => animal.porte.toLowerCase() === "medio");
-const animaisGrande = animais.filter(animal => animal.porte.toLowerCase() === "grande");
-const animaisFilhote = animais.filter(animal => animal.idade.toLowerCase().includes("meses"));
-const animaisAdulto = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && !animal.idade.toLowerCase().includes("meses"));
-const animaisIdoso = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && parseInt(animal.idade) >= 7);
-const botaoCachorro = document.getElementById("cães");
-const botaoGato = document.getElementById("gatos");
- botaoCachorro.addEventListener("click", () => {
-  (animaisCachorro);
- });
+ const botaofiltro = document.querySelectorAll(".filtro");
  const barrapesquisa = document.getElementById("pesquisar");
+ let filtroAtual = "all";
+ botaofiltro.forEach(botao => {
+    botao.addEventListener("click", () => {
+      filtroAtual = botao.dataset.filtro;
+      botaofiltro.forEach(btn => btn.setAttribute("aria-pressed", "false"));
+      botao.setAttribute("aria-pressed", "true");
+      aplicarFiltros();
+    });
+ });
  barrapesquisa.addEventListener("input", () => {
-  const termoPesquisa = barrapesquisa.value.toLowerCase();
-  const listapets = document.querySelector("#cardpet");
-  if (listaCardpet) {
-    listapets.forEach(animal => {
-    if (animal.nome.toLowerCase().includes(termoPesquisa) || animal.especie.toLowerCase().trim().includes(termoPesquisa)) {
-      cardpet.style.display = "flex";
-    }
-    else {
-      cardpet.style.display = "none";
-    }
-  });
-   }
-  });
-
-  const animaisFiltrados = animais.filter(animal => {
-    return animal.nome.toLowerCase().includes(termoPesquisa) || animal.especie.toLowerCase().trim().includes(termoPesquisa);
-  });
+    aplicarFiltros();
+ });
+ function aplicarFiltros() {
+ const termoPesquisa = barrapesquisa.value.toLowerCase().trim();
+ const animaisFiltrados = animais.filter(animal => {
+  const especieOk = 
+  filtroAtual === "all" ||
+  (filtroAtual === "cachorro" && animal.especie.toLowerCase() === "cachorro") ||
+ (filtroAtual === "gato" && animal.especie.toLowerCase() === "gato");
+  const pesquisaOk = 
+  animal.nome.toLowerCase().includes(termoPesquisa) ||
+  animal.especie.toLowerCase().includes(termoPesquisa);
+  return especieOk && pesquisaOk;
+ });
+ mostrarAnimais(animaisFiltrados);
+}
   
