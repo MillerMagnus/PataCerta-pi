@@ -244,8 +244,13 @@ const listaCardpet = document.querySelector("#cardpet");
             </a>
             `;
             listaCardpet.appendChild(article);
+              
+  
   });
 }
+  
+
+
 const checkboxes = document.querySelectorAll('input[name="favoritar"]');
 checkboxes.forEach(checkbox => {
   checkbox.addEventListener("change",() => {
@@ -401,3 +406,20 @@ if (ListaSoli) {
     ListaSoli.appendChild(article);
   });
 }
+
+const animaisCachorro = animais.filter(animal => animal.especie.toLowerCase() === "cachorro");
+const animaisGato = animais.filter(animal => animal.especie.toLowerCase() === "gato");
+const animaisOutros = animais.filter(animal => animal.especie.toLowerCase() !== "cachorro" && animal.especie.toLowerCase() !== "gato");
+const animaisFemea = animais.filter(animal => animal.sexo.toLowerCase() === "fêmea");
+const animaisMacho = animais.filter(animal => animal.sexo.toLowerCase() === "macho");
+const animaisPequeno = animais.filter(animal => animal.porte.toLowerCase() === "pequeno");
+const animaisMedio = animais.filter(animal => animal.porte.toLowerCase() === "medio");
+const animaisGrande = animais.filter(animal => animal.porte.toLowerCase() === "grande");
+const animaisFilhote = animais.filter(animal => animal.idade.toLowerCase().includes("meses"));
+const animaisAdulto = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && !animal.idade.toLowerCase().includes("meses"));
+const animaisIdoso = animais.filter(animal => animal.idade.toLowerCase().includes("anos") && parseInt(animal.idade) >= 7);
+const botaoCachorro = document.getElementById("cães");
+const botaoGato = document.getElementById("gatos");
+ botaoCachorro.addEventListener("click", () => {
+  mostrarAnimais(animaisCachorro);
+ });
