@@ -11,9 +11,9 @@
 /* HOME, header, nav y footer */
 
 header.homeHeader {
-    background-color: #1e3b29;
+    background-color: #c1e0d8;
     font-family: 20px, Arial, sans-serif;
-    color: #ffffff;
+    color: #1e3b29;
     height: 100px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ header.homeHeader {
 }
 
 nav.homeNav {
-    background-color: #1e3b29;
+    background-color: #c1e0d8;
     font-family: 20px, Arial, sans-serif;
     color: #ffffff;
     height: 50px;
@@ -32,7 +32,7 @@ nav.homeNav {
 }
 
 article.home-article {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 40px 20px;
     text-align: center;
     border-radius: 100px 1px 100px 1px;
@@ -41,7 +41,7 @@ article.home-article {
 .h1-section {
     font-size: 36px;
     color: #1e3b29;
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
 }
 
@@ -50,6 +50,8 @@ article.home-article {
     color: #1e3b29;
     padding: 20px;
     text-align: center;
+    background-color: #80928e;
+    
 }
 
 h3 {
@@ -59,6 +61,10 @@ h3 {
     text-align: center;
 }
 
+.texto-intro {
+    background-color: #80928e;
+}
+
 .como-funciona__numero {
     font-size: 24px;
     color: #1e3b29;
@@ -66,8 +72,12 @@ h3 {
     text-align: center;
 }
 
+.fundo {
+    background-color: #80928e;
+}
+
 .como-funciona__passo1 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,7 +86,7 @@ h3 {
 }
 
 .como-funciona__passo2 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,7 +95,7 @@ h3 {
 }
 
 .como-funciona__passo3 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,7 +104,7 @@ h3 {
 }
 
 .butaolink {
-    background-color: #e6c4c4;
+    background-color: #5ec7b5;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -124,7 +134,7 @@ h3 {
 }
 
 .rodape{
-    background-color:#1e3b29;
+    background-color:#c1e0d8;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -139,7 +149,7 @@ nav{
 }
 
 .pilha {
-    color: #ffffff;
+    color: #1e3b29;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,6 +169,7 @@ nav{
 
 .home-section {
     display: flex;
+    background-color: #80928e;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -185,7 +196,7 @@ nav{
 
 .botao-primario {
     background-color: #1e3b29;
-    color: #e6c4c4;
+    color: #c1e0d8;
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
@@ -592,25 +603,74 @@ section.sectpets {
     height: fit-content;
 }
 
-.favoritos{
-    background-color: #39bdad;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    width: fit-content;   
-    height: fit-content;
+/*----------------------------------------------------------------*/
+/* FAVORITOS */
+
+
+#favoritos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px 20px;
+    background-color: #e6c4c4;
 }
 
-.favoritos img {
-    width: fit-content;
-    height: 600px;
+.card-favorito {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    padding: 16px;
+    background-color: #c9eae6;
+    border: 2px solid #1e3b29;
     border-radius: 10px;
-    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card-favorito:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
+.card-favorito img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-favorito h2 {
+    font-size: 22px;
+    color: #1e3b29;
+    margin-top: 12px;
+}
+
+.card-favorito p {
+    font-size: 16px;
+    color: #1e3b29;
+    margin-top: 4px;
+    text-transform: capitalize;
+}
+
+.card-favorito::before {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6c4c4;
+    border-radius: 50%;
+    color: red;
+    font-size: 20px;
+}
 
 /*----------------------------------------------------------------*/
 /* FORMULÁRIO */
