@@ -11,9 +11,9 @@
 /* HOME, header, nav y footer */
 
 header.homeHeader {
-    background-color: #1e3b29;
+    background-color: #c1e0d8;
     font-family: 20px, Arial, sans-serif;
-    color: #ffffff;
+    color: #1e3b29;
     height: 100px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ header.homeHeader {
 }
 
 nav.homeNav {
-    background-color: #1e3b29;
+    background-color: #c1e0d8;
     font-family: 20px, Arial, sans-serif;
     color: #ffffff;
     height: 50px;
@@ -32,7 +32,7 @@ nav.homeNav {
 }
 
 article.home-article {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 40px 20px;
     text-align: center;
     border-radius: 100px 1px 100px 1px;
@@ -41,7 +41,7 @@ article.home-article {
 .h1-section {
     font-size: 36px;
     color: #1e3b29;
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
 }
 
@@ -50,6 +50,7 @@ article.home-article {
     color: #1e3b29;
     padding: 20px;
     text-align: center;
+    background-color: #80928e;
 }
 
 h3 {
@@ -66,8 +67,12 @@ h3 {
     text-align: center;
 }
 
+.fundo {
+    background-color: #80928e;
+}
+
 .como-funciona__passo1 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,7 +81,7 @@ h3 {
 }
 
 .como-funciona__passo2 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,7 +90,7 @@ h3 {
 }
 
 .como-funciona__passo3 {
-    background-color: #e6c4c4;
+    background-color: #c1e0d8;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,7 +99,7 @@ h3 {
 }
 
 .butaolink {
-    background-color: #e6c4c4;
+    background-color: #5ec7b5;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -124,7 +129,7 @@ h3 {
 }
 
 .rodape{
-    background-color:#1e3b29;
+    background-color:#c1e0d8;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -139,7 +144,7 @@ nav{
 }
 
 .pilha {
-    color: #ffffff;
+    color: #1e3b29;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,6 +164,7 @@ nav{
 
 .home-section {
     display: flex;
+    background-color: #80928e;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -185,7 +191,7 @@ nav{
 
 .botao-primario {
     background-color: #1e3b29;
-    color: #e6c4c4;
+    color: #c1e0d8;
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
@@ -312,13 +318,8 @@ div.pesquisar {
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
     background-color: #c1e0d8;
     padding: 10px;
-=======
-    background-color: #e6c4c4;
-    padding: 10px 20px 20px;
->>>>>>> df4972e488fb6c6240db7f0ee91d61b96ae0a59c
 }
 
 input#pesquisar {
