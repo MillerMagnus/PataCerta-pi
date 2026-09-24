@@ -51,6 +51,7 @@ article.home-article {
     padding: 20px;
     text-align: center;
     background-color: #80928e;
+    
 }
 
 h3 {
@@ -58,6 +59,10 @@ h3 {
     color: #1e3b29;
     padding: 20px;
     text-align: center;
+}
+
+.texto-intro {
+    background-color: #80928e;
 }
 
 .como-funciona__numero {
@@ -576,25 +581,74 @@ section.sectpets {
     height: fit-content;
 }
 
-.favoritos{
-    background-color: #39bdad;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    width: fit-content;   
-    height: fit-content;
+/*----------------------------------------------------------------*/
+/* FAVORITOS */
+
+
+#favoritos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px 20px;
+    background-color: #e6c4c4;
 }
 
-.favoritos img {
-    width: fit-content;
-    height: 600px;
+.card-favorito {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    padding: 16px;
+    background-color: #c9eae6;
+    border: 2px solid #1e3b29;
     border-radius: 10px;
-    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card-favorito:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
+.card-favorito img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-favorito h2 {
+    font-size: 22px;
+    color: #1e3b29;
+    margin-top: 12px;
+}
+
+.card-favorito p {
+    font-size: 16px;
+    color: #1e3b29;
+    margin-top: 4px;
+    text-transform: capitalize;
+}
+
+.card-favorito::before {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6c4c4;
+    border-radius: 50%;
+    color: red;
+    font-size: 20px;
+}
 
 /*----------------------------------------------------------------*/
 /* FORMULÁRIO */
