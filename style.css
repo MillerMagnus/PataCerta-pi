@@ -312,13 +312,8 @@ div.pesquisar {
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
-    background-color: #c1e0d8;
-    padding: 10px;
-=======
     background-color: #e6c4c4;
     padding: 10px 20px 20px;
->>>>>>> df4972e488fb6c6240db7f0ee91d61b96ae0a59c
 }
 
 input#pesquisar {
@@ -531,7 +526,8 @@ section.sectpets {
 .perfilpet {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: row;
+    gap: 50px;
     justify-content: center;
     padding: 20px;
     background-color: #d1c9ea;
@@ -544,11 +540,32 @@ section.sectpets {
 
 .perfilpet img {
     width: fit-content;
-    height: 600px;
+    height: 350px;
     border-radius: 10px;
 }
+.perfilpet h2{
+ font-family: "Caveat", cursive;
+    font-size: 32px;
+    color: #1e3b29;
+    margin: 0 0 6px;
+}
+.perfilpet p{
+    font-family:"Caveat",cursive; 
+     display: flex;
+     flex-direction: column;
 
-
+}
+.perfilpet button {
+    background-color: #1e3b29;
+    color: #c1e0d8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: transform 0.2s ease;
+}
 /*----------------------------------------------------------------*/
 /* FAVORITOS */
 

@@ -12,6 +12,7 @@ const animais = [
     cidade: "Guararapes",
     status: "Disponível",
     imagem: "/images/shadow.jpeg",
+    descricao: "Shadow é um companheiro de pequeno porte cheio de carinho para oferecer. Ele procura uma família que possa lhe dar atenção, segurança e muitos momentos felizes."
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem:"/images/thor.jpeg"
+    imagem:"/images/thor.jpeg",
+    descricao: "Com apenas 6 meses, Thor ainda tem muita coisa para descobrir! É uma ótima companhia para quem quer acompanhar de perto o crescimento e as aventuras de um novo amigo."
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/nala.jpeg"
+    imagem: "/images/nala.jpeg",
+    descricao: "Nala tem um coração enorme e está pronta para encontrar uma família que enxergue além do seu tamanho. Ela merece um lar onde possa se sentir protegida e muito amada."
   },
   {
     id: 4,
@@ -44,7 +47,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/biscoito.jpeg"
+    imagem: "/images/biscoito.jpeg",
+    descricao: "Biscoito está esperando alguém que queira dividir a casa com uma companheira especial. Com seu jeitinho felino, ela pode transformar pequenos momentos do dia em boas lembranças."
   },
   {
     id: 5,
@@ -55,7 +59,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/bisteca.jpeg"
+    imagem: "/images/bisteca.jpeg",
+    descricao: "Bisteca procura um cantinho para chamar de seu. Uma caminha confortável, carinho e uma família responsável podem ser tudo o que ela precisa para começar uma nova história."
   },
   {
     id: 6,
@@ -66,7 +71,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/mia.jpeg"
+    imagem: "/images/mia.jpeg",
+    descricao: "Miá já viveu bastante e agora merece aproveitar uma fase tranquila ao lado de uma família. Ela procura alguém disposto a oferecer o carinho e a companhia que todo cão merece."
   },
   {
     id: 7,
@@ -77,7 +83,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/odin.jpeg"
+    imagem: "/images/odin.jpeg",
+     descricao: "Odin é jovem, grande e tem toda uma vida pela frente. Ele está procurando uma família preparada para compartilhar espaço, brincadeiras e muitos momentos de companheirismo."
   },
   {
     id: 8,
@@ -88,7 +95,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/gergolon.jpeg"
+    imagem: "/images/gergolon.jpeg",
+    descricao: "Gergolon ainda é um filhote e está naquela fase de aprender sobre o mundo. Com paciência, cuidado e muito carinho, ele pode crescer ao lado de uma família para a vida toda."
   },
   {
     id: 9,
@@ -99,7 +107,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Birigui",
     status: "Disponível",
-    imagem: "/images/nina.jpeg"
+    imagem: "/images/nina.jpeg",
+    descricao: "Nina tem 13 anos e merece que sua idade seja vista como uma história, não como um obstáculo. Ela procura um lar tranquilo onde possa receber atenção, cuidado e muito amor."
   },
   {
     id: 10,
@@ -110,7 +119,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Birigui",
     status: "Disponível",
-    imagem: "/images/paçoca.jpeg"
+    imagem: "/images/paçoca.jpeg",
+    descricao: "Paçoca está pronto para ganhar uma nova família. Aos 5 anos, ele ainda tem muitos ronrons, descobertas e momentos de companhia para compartilhar com quem decidir adotá-lo."
   },
   {
     id: 11,
@@ -121,7 +131,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: "/images/chico-moedas.jpeg"
+    imagem: "/images/chico-moedas.jpeg",
+     descricao: "Chico Moedas é pequeno no tamanho, mas pode ocupar um espaço enorme no coração da família. Ele procura um lar responsável que ofereça os cuidados e a atenção que precisa."
   },
   {
     id: 12,
@@ -132,7 +143,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Rubiácea",
     status: "Disponível",
-    imagem: "/images/maya.jpeg"
+    imagem: "/images/maya.jpeg",
+        descricao: "Maya procura uma segunda chance para viver cercada de carinho. Seu novo lar pode ser o começo de uma história cheia de companheirismo, segurança e momentos especiais."
   },
   {
     id: 13,
@@ -143,7 +155,8 @@ const animais = [
     sexo: "Macho",
     cidade: "birigui",
     status: "Disponível",
-    imagem: "/images/banguela.jpeg"
+    imagem: "/images/banguela.jpeg",
+     descricao: "Banguela está procurando alguém para dividir a rotina e conquistar aos poucos. Ele merece um lar responsável, confortável e cheio de espaço para ser simplesmente ele mesmo."
   },
   {
     id: 14,
@@ -154,7 +167,8 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/diego-roberto.jpeg"
+    imagem: "/images/diego-roberto.jpeg",
+      descricao: "Diego Roberto é jovem e está pronto para começar uma nova fase. Ele procura uma família que queira transformar sua chegada em uma amizade para muitos anos."
   },
   {
     id: 15,
@@ -165,7 +179,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/alice.jpeg"
+    imagem: "/images/alice.jpeg",
+    descricao: "Alice procura um lar onde possa viver com tranquilidade e receber todos os cuidados necessários. Para quem gosta de animais diferentes, ela pode ser uma companheira muito especial."
   },
   {
     id: 16,
@@ -176,7 +191,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/Minina.jpeg"
+    imagem: "/images/Minina.jpeg",
+    descricao: "Minina já passou por muitos anos de vida e agora procura aquilo que todo animal merece: um lar seguro, uma rotina tranquila e alguém que escolha cuidar dela todos os dias."
   },
   {
     id: 17,
@@ -187,7 +203,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/Ivy.jpeg"
+    imagem: "/images/Ivy.jpeg",
+    descricao: "Ivy ainda é bem novinha e tem uma vida inteira pela frente. Ela procura uma família que queira acompanhar suas descobertas e fazer parte de seu crescimento."
   },
 {
     id: 18,
@@ -198,7 +215,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/Vênus.jpeg"
+    imagem: "/images/Vênus.jpeg",
+    descricao: "Vênus está esperando por alguém que queira abrir espaço para uma nova integrante na família. Ela merece um lar onde possa se sentir segura, querida e parte da rotina."
   },
   {
     id: 19,
@@ -209,7 +227,8 @@ const animais = [
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/megan-maria.jpeg"
+    imagem: "/images/megan-maria.jpeg",
+    descricao: "Megan Maria tem 9 anos e ainda tem muito amor para dar. Ela procura uma família que valorize sua companhia e queira proporcionar a ela uma vida tranquila e cheia de carinho."
   },
 
 
@@ -297,6 +316,9 @@ if (animal) {
     <p>${animal.sexo}</p>
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
+    <p>${animal.descricao}</p>
+     <button> adotar </button>
+            </a>
   `;
 }
 }
@@ -405,7 +427,6 @@ if (ListaSoli) {
 }
  const barrapesquisa = document.getElementById("pesquisar");
  let filtroAtual = "all";
- 
  barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
  });
@@ -423,4 +444,3 @@ if (ListaSoli) {
  });
  mostrarAnimais(animaisFiltrados);
 }
-  
