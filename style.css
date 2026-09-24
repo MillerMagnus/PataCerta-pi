@@ -520,6 +520,7 @@ nav.navPrincipal {
 /*----------------------------------------------------------------*/
 /* PERFILPET */
 
+
 .mainperfilpet {
     display: flex;
     flex-direction: column;
@@ -580,6 +581,7 @@ section.sectpets {
 /*----------------------------------------------------------------*/
 /* FAVORITOS */
 
+
 .sectionfav{
     display: flex;
     flex-wrap: wrap;
@@ -588,24 +590,6 @@ section.sectpets {
     padding: 20px;
     background-color: #eb6d75;
 }
-
-.card-favorito {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    background-color: #d1c9ea;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    width: fit-content;   
-    height: fit-content;
-}
-
-/*----------------------------------------------------------------*/
-/* FAVORITOS */
-
 
 #favoritos {
     display: flex;
