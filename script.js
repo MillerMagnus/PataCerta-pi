@@ -260,11 +260,15 @@ function mostrarAnimais(animais) {
               <span class="star">♥</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
-            <button> adotar </button>
+            <button id="adotar"> adotar </button>
             </a>
             `;
             listaCardpet.appendChild(article);
   });
+}
+const adotarButton = document.getElementById("adotar");
+if (adotarButton){
+  
 }
 mostrarAnimais(animais);
 
@@ -318,7 +322,11 @@ if (animal) {
     <p>${animal.status}</p>
     <p>${animal.descricao}</p>
      <button> adotar </button>
-            </a>
+    <label class="favoritar"> 
+            <input type="checkbox" name="favoritar" value="${animal.id}">
+              <span class="star">♥</span>
+            </label>
+    <button id="cancelar"> Cancelar </button>
   `;
 }
 }
@@ -354,6 +362,12 @@ if (formulario) {
     let solicitacoes = JSON.parse(
       localStorage.getItem("solicitacoes")
     ) || [];
+    const jaSolicitado = solicitacoes.some(
+      (solicitacao) => solicitacao.animalId === solicitacao.animalId);
+      if (jaSolicitado) {
+        alert("Você já enviou uma solicitação para este animal.");
+        return;
+      }
     solicitacoes.push(solicitacao);
     localStorage.setItem(
       "solicitacoes",
