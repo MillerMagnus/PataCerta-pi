@@ -54,6 +54,16 @@ article.home-article {
     
 }
 
+.h2-subtitle-fim {
+    background-color: #1e3b29;
+    color:#c1e0d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 100px 100px 10px 10px;
+}
+
 h3 {
     font-size: 28px;
     color: #1e3b29;
@@ -158,11 +168,14 @@ nav{
     text-align: center;
 }
 
-.texto-suave {
+.texto-suave-fim {
     font-size: 18px;
-    color: #1e3b29;
+    color: #80928e;
+    background-color: #1e3b29;
     text-align: left;
     margin-bottom: 20px;
+    border-radius: 1px 1px 100px 100px;
+    text-align: center;
 }
 
 /* divs y containers do home */
@@ -784,4 +797,3 @@ form.formulario button:hover {
     background-color: #944545;
     padding: 10px;
 }
-
