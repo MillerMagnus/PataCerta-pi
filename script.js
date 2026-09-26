@@ -246,6 +246,8 @@ function mostrarAnimais(animais) {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
     article.className = "caixapet";
+    const idFavorito = String(animal.id);
+    const estaFavoritado = favoritos.includes(idFavorito);
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
@@ -264,8 +266,8 @@ function mostrarAnimais(animais) {
             </a>
             `;
             listaCardpet.appendChild(article);
-  });
-}
+  }); 
+  }
 const adotarButton = document.getElementById("adotar");
 if (adotarButton){
   
@@ -326,9 +328,24 @@ if (animal) {
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="star">♥</span>
             </label>
-    <button id="cancelar"> Cancelar </button>
   `;
 }
+const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');
+ if (favoritos.includes(String(animal.id))){
+  favoritoPerfil.checked = true;
+ }
+ favoritoPerfil.addEventListener("change",() =>{
+  const id = String(animal.id);
+  if (favoritoPerfil.checked) {
+    if (!favoritos.includes(id))
+    {
+      favoritos.push(id);
+    }
+  } else {
+    favoritos = favoritos.filter(favorito =>favorito !==id);
+  }
+ localStorage.setItem("favoritos",JSON.stringify(favoritos));
+ });
 }
 
 const paginaFav = document.querySelector("#favoritos");
@@ -363,7 +380,7 @@ if (formulario) {
       localStorage.getItem("solicitacoes")
     ) || [];
     const jaSolicitado = solicitacoes.some(
-      (solicitacao) => solicitacao.animalId === solicitacao.animalId);
+      (solicitacao) => solicitacao.animalId === animalId);
       if (jaSolicitado) {
         alert("Você já enviou uma solicitação para este animal.");
         return;
@@ -433,12 +450,23 @@ if (ListaSoli) {
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
+      <div class="botoes-solicitacao">
+      <button class="cancelarsoli" data-index="${index}"> Cancelar solicitação </button>
+      </div>
       </div>
     `;
 
     ListaSoli.appendChild(article);
+    const botaoCancelar = document.querySelector(".cancelarsoli");
+  botaoCancelar.addEventListener("click", () => {
+    solicitacoes.splice(index, 1);
+    localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
+    article.remove();
+  });
   });
 }
+
+
  const barrapesquisa = document.getElementById("pesquisar");
  let filtroAtual = "all";
  barrapesquisa.addEventListener("input", () => {
