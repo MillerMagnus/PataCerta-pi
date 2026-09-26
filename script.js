@@ -272,48 +272,51 @@ function mostrarAnimais(animais) {
               <span class="star">♥</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
-            <button id="adotar"> adotar </button>
+            <button class="adotar"> adotar </button>
             </a>
             `;
             listaCardpet.appendChild(article);
   });
 }
-const adotarButton = document.getElementById("adotar");
-if (adotarButton){
-  
-}
-mostrarAnimais(animais);
 
-const checkboxes = document.querySelectorAll('input[name="favoritar"]');
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener("change",() => {
-    const id = checkbox.value;
-    if ( checkbox.checked){
-      if (!favoritos.includes(id)) {
-        favoritos.push(id);
-      }
-    }
-    else {
-      favoritos = favoritos.filter( favorito => favorito !==id);
-    }
-    localStorage.setItem("favoritos",JSON.stringify(favoritos));
-  });
-});
-  const quantidade = document.getElementById("contAnimais");
-  if (quantidade) {
-    quantidade.textContent = animais.length;
-  document.addEventListener("DOMContentLoaded", () => {
-    const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+mostrarAnimais(animais);
+configurarFavoritos();
+function configurarFavoritos() {
+    const checkboxes = document.querySelectorAll(
+        'input[name="favoritar"]'
+    );
+
     checkboxes.forEach(checkbox => {
-      const id = checkbox.value;  
-      if (favoritos.includes(id)) {
-        checkbox.checked = true; }
-        else {
-          checkbox.checked = false;
-      } 
+
+        const id = String(checkbox.value);
+
+        // Recupera o estado salvo
+        checkbox.checked = favoritos.includes(id);
+
+        checkbox.addEventListener("change", () => {
+
+            if (checkbox.checked) {
+
+                if (!favoritos.includes(id)) {
+                    favoritos.push(id);
+                }
+
+            } else {
+
+                favoritos = favoritos.filter(
+                    favorito => favorito !== id
+                );
+
+            }
+
+            localStorage.setItem(
+                "favoritos",
+                JSON.stringify(favoritos)
+            );
+        });
     });
-});
-  }
+}
+
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -338,8 +341,39 @@ if (animal) {
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="star">♥</span>
             </label>
-    <button id="cancelar"> Cancelar </button>
   `;
+}
+const favoritoPerfil = listaCatalogoPet.querySelector(
+    'input[name="favoritar"]'
+);
+
+if (favoritoPerfil) {
+
+    const id = String(animal.id);
+
+    favoritoPerfil.checked = favoritos.includes(id);
+
+    favoritoPerfil.addEventListener("change", () => {
+
+        if (favoritoPerfil.checked) {
+
+            if (!favoritos.includes(id)) {
+                favoritos.push(id);
+            }
+
+        } else {
+
+            favoritos = favoritos.filter(
+                favorito => favorito !== id
+            );
+
+        }
+
+        localStorage.setItem(
+            "favoritos",
+            JSON.stringify(favoritos)
+        );
+    });
 }
 }
 
@@ -375,7 +409,7 @@ if (formulario) {
       localStorage.getItem("solicitacoes")
     ) || [];
     const jaSolicitado = solicitacoes.some(
-      (solicitacao) => solicitacao.animalId === solicitacao.animalId);
+      (solicitacao) => solicitacao.animalId === idAnimal);
       if (jaSolicitado) {
         alert("Você já enviou uma solicitação para este animal.");
         return;
@@ -445,14 +479,32 @@ if (ListaSoli) {
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
+      <div class="botoesSoli">
+      <button class = "cancelar">Cancelar solicitação</button>
+      </div>
       </div>
     `;
 
     ListaSoli.appendChild(article);
+    const cancelar = article.querySelector(".cancelar");
+
+cancelar.addEventListener("click", () => {
+
+    solicitacoes.splice(index, 1);
+
+    localStorage.setItem(
+        "solicitacoes",
+        JSON.stringify(solicitacoes)
+    );
+
+    article.remove();
+});
   });
 }
  const barrapesquisa = document.getElementById("pesquisar");
+ if (barrapesquisa) {
  let filtroAtual = "all";
+ 
  barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
  });
@@ -470,3 +522,4 @@ if (ListaSoli) {
  });
  mostrarAnimais(animaisFiltrados);
 }
+ }
