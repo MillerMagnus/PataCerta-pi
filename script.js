@@ -230,6 +230,18 @@ const animais = [
     imagem: "/images/megan-maria.jpeg",
     descricao: "Megan Maria tem 9 anos e ainda tem muito amor para dar. Ela procura uma família que valorize sua companhia e queira proporcionar a ela uma vida tranquila e cheia de carinho."
   },
+  {
+    id: 20,
+    nome: "-",
+    especie: "-",
+    porte: "-",
+    idade: "-",
+    sexo: "-",
+    cidade: "-",
+    status: "-",
+    imagem: "/images/fundopataslaterais.jpeg",
+    descricao: "."
+  }
 
 
 
