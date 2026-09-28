@@ -280,16 +280,6 @@ function mostrarAnimais(animais) {
             listaCardpet.appendChild(article);
   }); 
   }
-const adotarButton = document.getElementById("adotar");
-if (adotarButton){
-  
-}
-mostrarAnimais(animais);
-=======
-  });
-}
->>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
-
 mostrarAnimais(animais);
 configurarFavoritos();
 function configurarFavoritos() {
@@ -347,14 +337,15 @@ if (animal) {
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
     <p>${animal.descricao}</p>
-     <button> adotar </button>
+     <a href="formulario.html?id=${animal.id}">
+            <button class="adotar"> adotar </button>
+            </a>
     <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="star">♥</span>
             </label>
   `;
 }
-<<<<<<< HEAD
 const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');
  if (favoritos.includes(String(animal.id))){
   favoritoPerfil.checked = true;
@@ -371,40 +362,6 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
   }
  localStorage.setItem("favoritos",JSON.stringify(favoritos));
  });
-=======
-const favoritoPerfil = listaCatalogoPet.querySelector(
-    'input[name="favoritar"]'
-);
-
-if (favoritoPerfil) {
-
-    const id = String(animal.id);
-
-    favoritoPerfil.checked = favoritos.includes(id);
-
-    favoritoPerfil.addEventListener("change", () => {
-
-        if (favoritoPerfil.checked) {
-
-            if (!favoritos.includes(id)) {
-                favoritos.push(id);
-            }
-
-        } else {
-
-            favoritos = favoritos.filter(
-                favorito => favorito !== id
-            );
-
-        }
-
-        localStorage.setItem(
-            "favoritos",
-            JSON.stringify(favoritos)
-        );
-    });
-}
->>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
 }
 
 const paginaFav = document.querySelector("#favoritos");
@@ -439,11 +396,7 @@ if (formulario) {
       localStorage.getItem("solicitacoes")
     ) || [];
     const jaSolicitado = solicitacoes.some(
-<<<<<<< HEAD
       (solicitacao) => solicitacao.animalId === animalId);
-=======
-      (solicitacao) => solicitacao.animalId === idAnimal);
->>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
       if (jaSolicitado) {
         alert("Você já enviou uma solicitação para este animal.");
         return;
@@ -513,40 +466,19 @@ if (ListaSoli) {
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
-<<<<<<< HEAD
       <div class="botoes-solicitacao">
       <button class="cancelarsoli" data-index="${index}"> Cancelar solicitação </button>
-=======
-      <div class="botoesSoli">
-      <button class = "cancelar">Cancelar solicitação</button>
->>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
       </div>
       </div>
     `;
 
     ListaSoli.appendChild(article);
-<<<<<<< HEAD
-    const botaoCancelar = document.querySelector(".cancelarsoli");
-  botaoCancelar.addEventListener("click", () => {
+    const botoesCancelar = document.querySelector(".cancelarsoli");
+  botoesCancelar.addEventListener("click", () => {
     solicitacoes.splice(index, 1);
     localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
     article.remove();
   });
-=======
-    const cancelar = article.querySelector(".cancelar");
-
-cancelar.addEventListener("click", () => {
-
-    solicitacoes.splice(index, 1);
-
-    localStorage.setItem(
-        "solicitacoes",
-        JSON.stringify(solicitacoes)
-    );
-
-    article.remove();
-});
->>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
   });
 }
 
