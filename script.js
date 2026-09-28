@@ -274,7 +274,7 @@ function mostrarAnimais(animais) {
               <span class="star">♥</span>
             </label>
             <a href="formulario.html?id=${animal.id}">
-            <button id="adotar"> adotar </button>
+            <button class="adotar"> adotar </button>
             </a>
             `;
             listaCardpet.appendChild(article);
@@ -285,37 +285,49 @@ if (adotarButton){
   
 }
 mostrarAnimais(animais);
-
-const checkboxes = document.querySelectorAll('input[name="favoritar"]');
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener("change",() => {
-    const id = checkbox.value;
-    if ( checkbox.checked){
-      if (!favoritos.includes(id)) {
-        favoritos.push(id);
-      }
-    }
-    else {
-      favoritos = favoritos.filter( favorito => favorito !==id);
-    }
-    localStorage.setItem("favoritos",JSON.stringify(favoritos));
+=======
   });
-});
-  const quantidade = document.getElementById("contAnimais");
-  if (quantidade) {
-    quantidade.textContent = animais.length;
-  document.addEventListener("DOMContentLoaded", () => {
-    const checkboxes = document.querySelectorAll('input[name="favoritar"]');
+}
+>>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
+
+mostrarAnimais(animais);
+configurarFavoritos();
+function configurarFavoritos() {
+    const checkboxes = document.querySelectorAll(
+        'input[name="favoritar"]'
+    );
+
     checkboxes.forEach(checkbox => {
-      const id = checkbox.value;  
-      if (favoritos.includes(id)) {
-        checkbox.checked = true; }
-        else {
-          checkbox.checked = false;
-      } 
+
+        const id = String(checkbox.value);
+
+        // Recupera o estado salvo
+        checkbox.checked = favoritos.includes(id);
+
+        checkbox.addEventListener("change", () => {
+
+            if (checkbox.checked) {
+
+                if (!favoritos.includes(id)) {
+                    favoritos.push(id);
+                }
+
+            } else {
+
+                favoritos = favoritos.filter(
+                    favorito => favorito !== id
+                );
+
+            }
+
+            localStorage.setItem(
+                "favoritos",
+                JSON.stringify(favoritos)
+            );
+        });
     });
-});
-  }
+}
+
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -342,6 +354,7 @@ if (animal) {
             </label>
   `;
 }
+<<<<<<< HEAD
 const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');
  if (favoritos.includes(String(animal.id))){
   favoritoPerfil.checked = true;
@@ -358,6 +371,40 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
   }
  localStorage.setItem("favoritos",JSON.stringify(favoritos));
  });
+=======
+const favoritoPerfil = listaCatalogoPet.querySelector(
+    'input[name="favoritar"]'
+);
+
+if (favoritoPerfil) {
+
+    const id = String(animal.id);
+
+    favoritoPerfil.checked = favoritos.includes(id);
+
+    favoritoPerfil.addEventListener("change", () => {
+
+        if (favoritoPerfil.checked) {
+
+            if (!favoritos.includes(id)) {
+                favoritos.push(id);
+            }
+
+        } else {
+
+            favoritos = favoritos.filter(
+                favorito => favorito !== id
+            );
+
+        }
+
+        localStorage.setItem(
+            "favoritos",
+            JSON.stringify(favoritos)
+        );
+    });
+}
+>>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
 }
 
 const paginaFav = document.querySelector("#favoritos");
@@ -392,7 +439,11 @@ if (formulario) {
       localStorage.getItem("solicitacoes")
     ) || [];
     const jaSolicitado = solicitacoes.some(
+<<<<<<< HEAD
       (solicitacao) => solicitacao.animalId === animalId);
+=======
+      (solicitacao) => solicitacao.animalId === idAnimal);
+>>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
       if (jaSolicitado) {
         alert("Você já enviou uma solicitação para este animal.");
         return;
@@ -462,25 +513,48 @@ if (ListaSoli) {
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
+<<<<<<< HEAD
       <div class="botoes-solicitacao">
       <button class="cancelarsoli" data-index="${index}"> Cancelar solicitação </button>
+=======
+      <div class="botoesSoli">
+      <button class = "cancelar">Cancelar solicitação</button>
+>>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
       </div>
       </div>
     `;
 
     ListaSoli.appendChild(article);
+<<<<<<< HEAD
     const botaoCancelar = document.querySelector(".cancelarsoli");
   botaoCancelar.addEventListener("click", () => {
     solicitacoes.splice(index, 1);
     localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
     article.remove();
   });
+=======
+    const cancelar = article.querySelector(".cancelar");
+
+cancelar.addEventListener("click", () => {
+
+    solicitacoes.splice(index, 1);
+
+    localStorage.setItem(
+        "solicitacoes",
+        JSON.stringify(solicitacoes)
+    );
+
+    article.remove();
+});
+>>>>>>> a60ce44d8817a5b5e9b9c5bac8b2a9b210ed9d2b
   });
 }
 
 
  const barrapesquisa = document.getElementById("pesquisar");
+ if (barrapesquisa) {
  let filtroAtual = "all";
+ 
  barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
  });
@@ -498,3 +572,4 @@ if (ListaSoli) {
  });
  mostrarAnimais(animaisFiltrados);
 }
+ }
