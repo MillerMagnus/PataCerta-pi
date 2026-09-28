@@ -258,6 +258,8 @@ function mostrarAnimais(animais) {
     const article = document.createElement ("article");
     article.dataset.id = animal.id;
     article.className = "caixapet";
+    const idFavorito = String(animal.id);
+    const estaFavoritado = favoritos.includes(idFavorito);
     article.innerHTML = `
     <img src = "${animal.imagem}" alt ="${animal.nome}">
         <h2>${animal.nome}</h2>
@@ -276,9 +278,8 @@ function mostrarAnimais(animais) {
             </a>
             `;
             listaCardpet.appendChild(article);
-  });
-}
-
+  }); 
+  }
 mostrarAnimais(animais);
 configurarFavoritos();
 function configurarFavoritos() {
@@ -336,45 +337,31 @@ if (animal) {
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
     <p>${animal.descricao}</p>
-     <button> adotar </button>
+     <a href="formulario.html?id=${animal.id}">
+            <button class="adotar"> adotar </button>
+            </a>
     <label class="favoritar"> 
             <input type="checkbox" name="favoritar" value="${animal.id}">
               <span class="star">♥</span>
             </label>
   `;
 }
-const favoritoPerfil = listaCatalogoPet.querySelector(
-    'input[name="favoritar"]'
-);
-
-if (favoritoPerfil) {
-
-    const id = String(animal.id);
-
-    favoritoPerfil.checked = favoritos.includes(id);
-
-    favoritoPerfil.addEventListener("change", () => {
-
-        if (favoritoPerfil.checked) {
-
-            if (!favoritos.includes(id)) {
-                favoritos.push(id);
-            }
-
-        } else {
-
-            favoritos = favoritos.filter(
-                favorito => favorito !== id
-            );
-
-        }
-
-        localStorage.setItem(
-            "favoritos",
-            JSON.stringify(favoritos)
-        );
-    });
-}
+const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');
+ if (favoritos.includes(String(animal.id))){
+  favoritoPerfil.checked = true;
+ }
+ favoritoPerfil.addEventListener("change",() =>{
+  const id = String(animal.id);
+  if (favoritoPerfil.checked) {
+    if (!favoritos.includes(id))
+    {
+      favoritos.push(id);
+    }
+  } else {
+    favoritos = favoritos.filter(favorito =>favorito !==id);
+  }
+ localStorage.setItem("favoritos",JSON.stringify(favoritos));
+ });
 }
 
 const paginaFav = document.querySelector("#favoritos");
@@ -479,28 +466,23 @@ if (ListaSoli) {
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
-      <div class="botoesSoli">
-      <button class = "cancelar">Cancelar solicitação</button>
+      <div class="botoes-solicitacao">
+      <button class="cancelarsoli" data-index="${index}"> Cancelar solicitação </button>
       </div>
       </div>
     `;
 
     ListaSoli.appendChild(article);
-    const cancelar = article.querySelector(".cancelar");
-
-cancelar.addEventListener("click", () => {
-
+    const botoesCancelar = article.querySelector(".cancelarsoli");
+  botoesCancelar.addEventListener("click", () => {
     solicitacoes.splice(index, 1);
-
-    localStorage.setItem(
-        "solicitacoes",
-        JSON.stringify(solicitacoes)
-    );
-
+    localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
     article.remove();
-});
+  });
   });
 }
+
+
  const barrapesquisa = document.getElementById("pesquisar");
  if (barrapesquisa) {
  let filtroAtual = "all";
