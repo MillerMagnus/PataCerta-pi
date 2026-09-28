@@ -396,7 +396,7 @@ if (formulario) {
       localStorage.getItem("solicitacoes")
     ) || [];
     const jaSolicitado = solicitacoes.some(
-      (solicitacao) => solicitacao.animalId === animalId);
+      (solicitacao) => solicitacao.animalId === idAnimal);
       if (jaSolicitado) {
         alert("Você já enviou uma solicitação para este animal.");
         return;
@@ -473,7 +473,7 @@ if (ListaSoli) {
     `;
 
     ListaSoli.appendChild(article);
-    const botoesCancelar = document.querySelector(".cancelarsoli");
+    const botoesCancelar = article.querySelector(".cancelarsoli");
   botoesCancelar.addEventListener("click", () => {
     solicitacoes.splice(index, 1);
     localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
