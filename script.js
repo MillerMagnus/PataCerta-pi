@@ -366,7 +366,18 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
 
 const paginaFav = document.querySelector("#favoritos");
 if (paginaFav) {
+  function verificarFavoritos() {
+    const semFav = document.getElementById("mensagemFav");
+    const articleFav = document.querySelectorAll(".card-favorito");
+    if (articleFav.length === 0) {
+      mensagemFav.style.display = "block"; } 
+      else {
+        mensagemFav.style.display = "none";
+    }
+  }
+  
   const animaisFav = animais.filter (animal => favoritos.includes(String(animal.id)));
+  function mostrarFavoritos (){
   animaisFav.forEach(animal => {
     paginaFav.innerHTML += `<article class="card-favorito">
       <img src = "${animal.imagem}" alt="${animal.nome}"></img>
@@ -374,6 +385,9 @@ if (paginaFav) {
       <p>${animal.especie}</p>
     </article>`;
   });
+  }
+  mostrarFavoritos();
+  verificarFavoritos();
 }
 const formulario = document.querySelector("#formAdocao");
 if (formulario) {
@@ -420,7 +434,7 @@ if (ListaSoli) {
     const article = document.createElement("article");
 
     article.className = "card-solicitacao";
-
+ const semSoli = document.getElementById ("mensagemSoli");
     article.innerHTML = `
       <div class="card-animal">
 
