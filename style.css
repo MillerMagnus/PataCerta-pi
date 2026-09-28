@@ -149,19 +149,46 @@ h3 {
 }
 
 .carousel {
-    overflow:hidden;position:relative
+    overflow:hidden;
+    position:relative;
+    width: 1000px;
+    
 }
 
 .carousel-track { 
-    display:flex;transition:transform .45s cubic-bezier(.22,.99,.35,1)
+    display:flex;
+    transition:transform .45s cubic-bezier(.22,.99,.35,1)
 }
 
 .carousel-slide {
-    min-width:100%;flex-shrink:0
+    min-width:100%;
+    flex-shrink:0;
+    background-image: url("/images/fundopataslaterais.jpeg");
 }
 
 .carousel-slide img {
-    display:block;width:100%;height:auto
+    display:block;
+    width:100%;
+    height:auto
+}
+
+.carousel-slide img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    align-items: center;
+}
+
+.next {
+    width: 90px;
+    height: 100px;
+    font-size: 50px;
+}
+
+.prev {
+    width: 90px;
+    height: 100px;
+    font-size: 50px;
 }
 
 .como-funciona__passo1 {
