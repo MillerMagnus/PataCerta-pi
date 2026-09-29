@@ -367,7 +367,6 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
 const paginaFav = document.querySelector("#favoritos");
 if (paginaFav) {
   function verificarFavoritos() {
-    const semFav = document.getElementById("mensagemFav");
     const articleFav = document.querySelectorAll(".card-favorito");
     if (articleFav.length === 0) {
       mensagemFav.style.display = "block"; } 
@@ -429,12 +428,17 @@ const ListaSoli = document.querySelector("#solis");
 if (ListaSoli) {
   const solicitacoes =
     JSON.parse(localStorage.getItem("solicitacoes")) || [];
-
+ function  verificarSoli(){
+ const cardsSoli = document.querySelectorAll (".card-solicitacao");
+ const mensagemSoli = document.getElementById ("mensagemSoli");
+  if (cardsSoli.length === 0) {
+    mensagemSoli.style.display = "block";
+  } else mensagemSoli.style.display = "none";
+ }  
   solicitacoes.forEach((solicitacao, index) => {
     const article = document.createElement("article");
 
     article.className = "card-solicitacao";
- const semSoli = document.getElementById ("mensagemSoli");
     article.innerHTML = `
       <div class="card-animal">
 
@@ -485,15 +489,17 @@ if (ListaSoli) {
       </div>
       </div>
     `;
-
+ 
     ListaSoli.appendChild(article);
     const botoesCancelar = article.querySelector(".cancelarsoli");
   botoesCancelar.addEventListener("click", () => {
     solicitacoes.splice(index, 1);
     localStorage.setItem("solicitacoes", JSON.stringify(solicitacoes));
     article.remove();
+    verificarSoli();
   });
   });
+  verificarSoli();
 }
 
 
