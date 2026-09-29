@@ -172,15 +172,15 @@ const animais = [
   },
   {
     id: 15,
-    nome: "Alice",
-    especie: "Tartaruga",
+    nome: "Lucy",
+    especie: "Cachorro",
     porte: "Pequeno",
-    idade: "6 anos",
+    idade: "3 meses",
     sexo: "Fêmea",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "/images/alice.jpeg",
-    descricao: "Alice procura um lar onde possa viver com tranquilidade e receber todos os cuidados necessários. Para quem gosta de animais diferentes, ela pode ser uma companheira muito especial."
+    imagem: "/images/lucy.jpeg",
+    descricao: "Alice procura um lar onde possa viver com tranquilidade e receber todos os cuidados necessários."
   },
   {
     id: 16,
