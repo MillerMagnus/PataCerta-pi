@@ -230,7 +230,18 @@ const animais = [
     imagem: "/images/megan-maria.jpeg",
     descricao: "Megan Maria tem 9 anos e ainda tem muito amor para dar. Ela procura uma família que valorize sua companhia e queira proporcionar a ela uma vida tranquila e cheia de carinho."
   },
-  
+  {
+    id: 20,
+    nome: "Ted",
+    especie: "Cachorro",
+    porte: "Pequeno",
+    idade: "10 anos",
+    sexo: "Macho",
+    cidade: "Araçatuba",
+    status: "Disponível",
+    imagem: "",
+    descricao: "Ted de 10 anos, pequeno, charmoso e cheio de carinho para oferecer. Ele está em Araçatuba e espera por uma família que possa lhe proporcionar amor, cuidado e uma vida tranquila. Um companheiro especial que merece uma segunda chance para viver seus melhores momentos ao lado de quem o ame"
+  },
 ];
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
