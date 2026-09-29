@@ -699,6 +699,9 @@ section.sectpets {
 /*----------------------------------------------------------------*/
 /* FAVORITOS */
 
+.titulofav {
+    color: #264f3e;
+}
 
 .sectionfav{
     display: flex;
@@ -706,7 +709,7 @@ section.sectpets {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    background-color: #eb6d75;
+    background-color: transparent;
 }
 
 #favoritos {
@@ -716,7 +719,7 @@ section.sectpets {
     justify-content: center;
     gap: 24px;
     padding: 32px 20px;
-    background-color: #e6c4c4;
+    background-color: transparent;
 }
 
 .card-favorito {
@@ -887,7 +890,7 @@ form.formulario button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #272be6;
+    background-color: transparent;
     flex-wrap: wrap;
     width: 100%;
     padding: 10px;
