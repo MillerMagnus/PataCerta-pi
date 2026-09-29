@@ -151,7 +151,7 @@ h3 {
 .carousel {
     overflow:hidden;
     position:relative;
-    width: 1000px;
+    width: auto;
     
 }
 
@@ -163,32 +163,34 @@ h3 {
 .carousel-slide {
     min-width:100%;
     flex-shrink:0;
-    background-image: url("/images/fundopataslaterais.jpeg");
+    background-image: url("/images/fundopataslaterais.jpeg") ;
+    background-size: cover;
 }
 
 .carousel-slide img {
     display:block;
     width:100%;
-    height:auto
+    height:auto;
+    object-fit: contain;
 }
 
 .carousel-slide img {
     display: block;
-    width: 300px;
+    min-width: 300px;
     height: 400px;
     align-items: center;
 }
 
 .next {
-    width: 90px;
-    height: 100px;
-    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
 }
 
 .prev {
-    width: 90px;
-    height: 100px;
-    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
 }
 
 .como-funciona__passo1 {
@@ -484,8 +486,9 @@ article.caixapet {
     padding: 20px;
     margin: 0;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: auto;
+    height: 500px;
+    min-width: fit-content;
+    min-height: fit-content;
     box-sizing: border-box;
     transition: transform 0.3s ease;
 }
@@ -495,7 +498,7 @@ article.caixapet {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     background-color: #80928e;
     margin-top: 0px;
@@ -504,15 +507,14 @@ article.caixapet {
 .sectionpets {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-between;
     flex-direction: column;
 }
 
 .caixapet img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+    object-fit:contain;
+    border-radius: 1px;
     margin-bottom: 12px;
 }
 
@@ -522,6 +524,7 @@ article.caixapet {
     font-size: 32px;
     color: #1e3b29;
     margin: 0 0 6px;
+    text-align: center;
 }
 
 .caixapet p {
@@ -541,6 +544,7 @@ article.caixapet {
     font-size: 16px;
     margin-top: 8px;
     transition: transform 0.2s ease;
+    position:relative;
 }
 
 .caixapet a {
@@ -629,7 +633,7 @@ nav.navPrincipal {
 }
 
 .caixapet img {
-    height: 240px;
+    height: 340px;
 }
 
 
@@ -681,8 +685,8 @@ section.sectpets {
 }
 .perfilpet p{
     font-family:"Caveat",cursive; 
-     display: flex;
-     flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }
 .perfilpet button {
@@ -702,6 +706,11 @@ section.sectpets {
 .titulofav {
     color: #264f3e;
 }
+.mensagemFav {
+    font-family: "caveat";
+    font-size: 30px;
+}
+
 
 .sectionfav{
     display: flex;
