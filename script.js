@@ -84,7 +84,7 @@ const animais = [
     cidade: "Araçatuba",
     status: "Disponível",
     imagem: "/images/odin.jpeg",
-     descricao: "Odin é jovem, grande e tem toda uma vida pela frente. Ele está procurando uma família preparada para compartilhar espaço, brincadeiras e muitos momentos de companheirismo."
+      descricao: "Odin é jovem, grande e tem toda uma vida pela frente. Ele está procurando uma família preparada para compartilhar espaço, brincadeiras e muitos momentos de companheirismo."
   },
   {
     id: 8,
@@ -132,7 +132,7 @@ const animais = [
     cidade: "Rubiácea",
     status: "Disponível",
     imagem: "/images/chico-moedas.jpeg",
-     descricao: "Chico Moedas é pequeno no tamanho, mas pode ocupar um espaço enorme no coração da família. Ele procura um lar responsável que ofereça os cuidados e a atenção que precisa."
+      descricao: "Chico Moedas é pequeno no tamanho, mas pode ocupar um espaço enorme no coração da família. Ele procura um lar responsável que ofereça os cuidados e a atenção que precisa."
   },
   {
     id: 12,
@@ -156,7 +156,7 @@ const animais = [
     cidade: "birigui",
     status: "Disponível",
     imagem: "/images/banguela.jpeg",
-     descricao: "Banguela está procurando alguém para dividir a rotina e conquistar aos poucos. Ele merece um lar responsável, confortável e cheio de espaço para ser simplesmente ele mesmo."
+      descricao: "Banguela está procurando alguém para dividir a rotina e conquistar aos poucos. Ele merece um lar responsável, confortável e cheio de espaço para ser simplesmente ele mesmo."
   },
   {
     id: 14,
@@ -230,21 +230,7 @@ const animais = [
     imagem: "/images/megan-maria.jpeg",
     descricao: "Megan Maria tem 9 anos e ainda tem muito amor para dar. Ela procura uma família que valorize sua companhia e queira proporcionar a ela uma vida tranquila e cheia de carinho."
   },
-  {
-    id: 20,
-    nome: "-",
-    especie: "-",
-    porte: "-",
-    idade: "-",
-    sexo: "-",
-    cidade: "-",
-    status: "-",
-    imagem: "/images/fundopataslaterais.jpeg",
-    descricao: "."
-  }
-
-
-
+  
 ];
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
@@ -337,7 +323,7 @@ if (animal) {
     <p>${animal.cidade}</p>
     <p>${animal.status}</p>
     <p>${animal.descricao}</p>
-     <a href="formulario.html?id=${animal.id}">
+    <a href="formulario.html?id=${animal.id}">
             <button class="adotar"> adotar </button>
             </a>
     <label class="favoritar"> 
@@ -346,11 +332,10 @@ if (animal) {
             </label>
   `;
 }
-const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');
- if (favoritos.includes(String(animal.id))){
+const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]');if (favoritos.includes(String(animal.id))){
   favoritoPerfil.checked = true;
- }
- favoritoPerfil.addEventListener("change",() =>{
+}
+favoritoPerfil.addEventListener("change",() =>{
   const id = String(animal.id);
   if (favoritoPerfil.checked) {
     if (!favoritos.includes(id))
@@ -360,8 +345,8 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
   } else {
     favoritos = favoritos.filter(favorito =>favorito !==id);
   }
- localStorage.setItem("favoritos",JSON.stringify(favoritos));
- });
+localStorage.setItem("favoritos",JSON.stringify(favoritos));
+});
 }
 
 const paginaFav = document.querySelector("#favoritos");
@@ -428,13 +413,13 @@ const ListaSoli = document.querySelector("#solis");
 if (ListaSoli) {
   const solicitacoes =
     JSON.parse(localStorage.getItem("solicitacoes")) || [];
- function  verificarSoli(){
- const cardsSoli = document.querySelectorAll (".card-solicitacao");
- const mensagemSoli = document.getElementById ("mensagemSoli");
+function  verificarSoli(){
+const cardsSoli = document.querySelectorAll (".card-solicitacao");
+const mensagemSoli = document.getElementById ("mensagemSoli");
   if (cardsSoli.length === 0) {
     mensagemSoli.style.display = "block";
   } else mensagemSoli.style.display = "none";
- }  
+}  
   solicitacoes.forEach((solicitacao, index) => {
     const article = document.createElement("article");
 
@@ -489,7 +474,7 @@ if (ListaSoli) {
       </div>
       </div>
     `;
- 
+
     ListaSoli.appendChild(article);
     const botoesCancelar = article.querySelector(".cancelarsoli");
   botoesCancelar.addEventListener("click", () => {
@@ -503,25 +488,25 @@ if (ListaSoli) {
 }
 
 
- const barrapesquisa = document.getElementById("pesquisar");
- if (barrapesquisa) {
- let filtroAtual = "all";
- 
- barrapesquisa.addEventListener("input", () => {
+const barrapesquisa = document.getElementById("pesquisar");
+if (barrapesquisa) {
+let filtroAtual = "all";
+
+barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
- });
- function aplicarFiltros() {
- const termoPesquisa = barrapesquisa.value.toLowerCase().trim();
- const animaisFiltrados = animais.filter(animal => {
+});
+function aplicarFiltros() {
+const termoPesquisa = barrapesquisa.value.toLowerCase().trim();
+const animaisFiltrados = animais.filter(animal => {
   const especieOk = 
   filtroAtual === "all" ||
   (filtroAtual === "cachorro" && animal.especie.toLowerCase() === "cachorro") ||
- (filtroAtual === "gato" && animal.especie.toLowerCase() === "gato");
+(filtroAtual === "gato" && animal.especie.toLowerCase() === "gato");
   const pesquisaOk = 
   animal.nome.toLowerCase().includes(termoPesquisa) ||
   animal.especie.toLowerCase().includes(termoPesquisa);
   return especieOk && pesquisaOk;
- });
- mostrarAnimais(animaisFiltrados);
+});
+mostrarAnimais(animaisFiltrados);
 }
- }
+}
