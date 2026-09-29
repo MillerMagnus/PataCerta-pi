@@ -234,7 +234,7 @@ const animais = [
 ];
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
-/*----------------------------------------------------------------------------------------*/
+/*----------------------catalogo------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
 function mostrarAnimais(animais) {
@@ -303,7 +303,7 @@ function configurarFavoritos() {
         });
     });
 }
-
+/*-------------------------------------------mostrar mais--------------------------------------------------------------------------------------------------*/
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -348,7 +348,7 @@ favoritoPerfil.addEventListener("change",() =>{
 localStorage.setItem("favoritos",JSON.stringify(favoritos));
 });
 }
-
+/*-------------------------------------favoritos-----------------------------------------------------------------------*/
 const paginaFav = document.querySelector("#favoritos");
 if (paginaFav) {
   function verificarFavoritos() {
@@ -373,6 +373,7 @@ if (paginaFav) {
   mostrarFavoritos();
   verificarFavoritos();
 }
+/*-----------------------------------------formulario/adotar----------------------------------------------------------------------------------------*/
 const formulario = document.querySelector("#formAdocao");
 if (formulario) {
   formulario.addEventListener("submit", (event) => {
@@ -408,6 +409,7 @@ if (formulario) {
     window.location.href = "solicitacoes.html";
   });
 }
+/*-----------------------------------------solicitações-----------------------------------------------------------------------------------------*/ 
 const ListaSoli = document.querySelector("#solis");
 
 if (ListaSoli) {
@@ -487,12 +489,12 @@ const mensagemSoli = document.getElementById ("mensagemSoli");
   verificarSoli();
 }
 
-
-const barrapesquisa = document.getElementById("pesquisar");
-if (barrapesquisa) {
-let filtroAtual = "all";
-
-barrapesquisa.addEventListener("input", () => {
+/*------------------------------------barra de pesquisa--------------------------------------------------*/ 
+ const barrapesquisa = document.getElementById("pesquisar");
+ if (barrapesquisa) {
+ let filtroAtual = "all";
+ 
+ barrapesquisa.addEventListener("input", () => {
     aplicarFiltros();
 });
 function aplicarFiltros() {
@@ -509,4 +511,8 @@ const animaisFiltrados = animais.filter(animal => {
 });
 mostrarAnimais(animaisFiltrados);
 }
-}
+ }
+ /*--------------------------numeros------------------------------------------------*/
+ const numeroAnimais = document.getElementById ("contAnimais");
+  if (numeroAnimais){
+  numeroAnimais.textContent = animais.length;}
