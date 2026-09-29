@@ -248,7 +248,7 @@ const animais = [
 ];
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
-/*----------------------------------------------------------------------------------------*/
+/*----------------------catalogo------------------------------------------------------------------*/
 
 const listaCardpet = document.querySelector("#cardpet");
 function mostrarAnimais(animais) {
@@ -317,7 +317,7 @@ function configurarFavoritos() {
         });
     });
 }
-
+/*-------------------------------------------mostrar mais--------------------------------------------------------------------------------------------------*/
 const listaCatalogoPet = document.querySelector("#perfilpet");
 if (listaCatalogoPet){
 
@@ -363,7 +363,7 @@ const favoritoPerfil = listaCatalogoPet.querySelector('input[name="favoritar"]')
  localStorage.setItem("favoritos",JSON.stringify(favoritos));
  });
 }
-
+/*-------------------------------------favoritos-----------------------------------------------------------------------*/
 const paginaFav = document.querySelector("#favoritos");
 if (paginaFav) {
   function verificarFavoritos() {
@@ -388,6 +388,7 @@ if (paginaFav) {
   mostrarFavoritos();
   verificarFavoritos();
 }
+/*-----------------------------------------formulario/adotar----------------------------------------------------------------------------------------*/
 const formulario = document.querySelector("#formAdocao");
 if (formulario) {
   formulario.addEventListener("submit", (event) => {
@@ -423,6 +424,7 @@ if (formulario) {
     window.location.href = "solicitacoes.html";
   });
 }
+/*-----------------------------------------solicitações-----------------------------------------------------------------------------------------*/ 
 const ListaSoli = document.querySelector("#solis");
 
 if (ListaSoli) {
@@ -502,7 +504,7 @@ if (ListaSoli) {
   verificarSoli();
 }
 
-
+/*------------------------------------barra de pesquisa--------------------------------------------------*/ 
  const barrapesquisa = document.getElementById("pesquisar");
  if (barrapesquisa) {
  let filtroAtual = "all";
@@ -525,3 +527,7 @@ if (ListaSoli) {
  mostrarAnimais(animaisFiltrados);
 }
  }
+ /*--------------------------numeros------------------------------------------------*/
+ const numeroAnimais = document.getElementById ("contAnimais");
+  if (numeroAnimais){
+  numeroAnimais.textContent = animais.length;}
