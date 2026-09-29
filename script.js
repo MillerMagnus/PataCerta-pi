@@ -255,7 +255,7 @@ function mostrarAnimais(animais) {
             <a href="perfilpet.html?id=${animal.id}">
             <button> Ver detalhes</button>
             </a>
-            <label class="favoritar"> 
+            <label class="favoritar">
             <input type="checkbox" name="favoritar" value="${animal.id}">
             <span class="star">♥</span>
             </label>
