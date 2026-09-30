@@ -32,7 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0ad;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -94,7 +94,7 @@ nav.homeNav {
 }
 
 article.home-article {
-    background-color: #c1e0d8;
+    background-color: #c1e0d89f;
     padding: 40px 20px;
     text-align: center;
     border-radius: 100px 1px 100px 1px;
@@ -103,7 +103,6 @@ article.home-article {
 .h1-section {
     font-size: 36px;
     color: #1e3b29;
-    background-color: #c1e0d8;
     padding: 20px;
 }
 
@@ -112,7 +111,6 @@ article.home-article {
     color: #1e3b29;
     padding: 20px;
     text-align: center;
-    background-color: #80928e;
     
 }
 
@@ -140,7 +138,7 @@ h3 {
 }
 
 .fundo {
-    background-color: #80928e;
+
 }
 
 .carousel {
@@ -192,7 +190,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #c1e0d8;
+    background-color: #c1e0d8b2;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -204,7 +202,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #c1e0d8;
+    background-color: #c1e0d8b2;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -216,7 +214,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    background-color: #c1e0d8;
+    background-color: #c1e0d8b2;
     padding: 20px;
     border-radius: 10px 100px 100px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -293,7 +291,6 @@ nav{
 
 .home-section {
     display: flex;
-    background-color: #80928e;
     justify-content: center;
     align-items: center;
     flex-direction: column;
