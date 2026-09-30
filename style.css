@@ -137,9 +137,7 @@ h3 {
     text-align: center;
 }
 
-.fundo {
 
-}
 
 .carousel {
     overflow:hidden;
@@ -279,12 +277,14 @@ nav{
 
 .texto-suave-fim {
     font-size: 18px;
-    color: #80928e;
+    color: #cdebe4;
     background-color: #1e3b29;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 1px 1px 100px 100px;
     text-align: center;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 /* divs y containers do home */
@@ -893,16 +893,17 @@ form.formulario button:hover {
     padding: 5px;
     border: 1px solid #000000;
     margin: 5px;
-    background-color: #599b5e60;
+    background-color: #000000e5;
     width:fit-content;
     max-width: 600px;
     max-height: fit-content;
-    height: 500px;
     min-height: fit-content;
+    font-size: 20px;
+    align-self: center;
+    justify-content: space-evenly;
 }
 .card-animal img {
     display: flex;
-    justify-content: center;
     width: auto;
     height: 300px;
     border-radius: 10px;
@@ -911,26 +912,29 @@ form.formulario button:hover {
 
 .info-animal{
     padding: 20px;
-    background-color: #90bde736;
+    background-color: #235e9636;
+    color: #28c1af;
     max-width:fit-content ;
     max-height: fit-content;
     align-self:center;
     margin: 10px;
+    font-size: 18px;
 }
 
 .dados-solicitante{
     padding: 10px;
-    background-color: #c0e0ee2d;
-    max-height: fit-content;
+    color: #28c1af;    
+    max-height: 200px;
     max-width: fit-content;
+    margin: auto;
 }
 .botoes-solicitacao {
-    padding: 10px;
+    padding: 1px;
     align-self: flex-end;
 }
 
 .cancelarsoli {
-    padding: 10px;
+    padding: 5px;
     color: #a6f0f5;
     margin: 5px;
     background-color: #000000;
@@ -956,4 +960,5 @@ form.formulario button:hover {
     padding: 20px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
 }
