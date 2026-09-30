@@ -327,13 +327,15 @@ if (animal) {
   listaCatalogoPet.innerHTML = `
     <img src="${animal.imagem}" alt="${animal.nome}">
     <h2>${animal.nome}</h2>
-    <p>${animal.especie}</p>
-    <p>${animal.idade}</p>
-    <p>${animal.porte}</p>
-    <p>${animal.sexo}</p>
-    <p>${animal.cidade}</p>
-    <p>${animal.status}</p>
-    <p>${animal.descricao}</p>
+    <div class="infos-perfil">
+      <p>${animal.especie}</p>
+      <p>${animal.idade}</p>
+      <p>${animal.porte}</p>
+      <p>${animal.sexo}</p>
+      <p>${animal.cidade}</p>
+      <p>${animal.status}</p>
+    </div>
+    <p class="desc-animal-perfil">${animal.descricao}</p>
     <a href="formulario.html?id=${animal.id}">
             <button class="adotar"> adotar </button>
             </a>

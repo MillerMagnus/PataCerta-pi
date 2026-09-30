@@ -1,11 +1,6 @@
 # PataCerta-pi
 PI Front End Senac UC5
 
-cupom de ração por adoção.
-
-https://publicapis.dev/resource/petfinder/cmw5ypur
-
-https://www.petfinder.com/dog/shrek-226cb90e-e312-4e6b-8f5d-13cf8f6d5ce9/pr/rio-grande/alma-de-bahia-foundation-pr10000/details/
 -----------------------------------------
 Início -	Apresentação do projeto, chamada para adoção e destaques. -	Botão para conhecer os animais e indicadores gerais.
 
@@ -28,7 +23,7 @@ Portal de adoção responsável de animais
 DOCUMENTO DE APOIO - GRUPO 1
 INTEGRANTES
 Luiz
-Muller Ribeiro Bueno
+Muller
 Antonio
 Maria
 

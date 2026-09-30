@@ -14,24 +14,27 @@
 </head>
 
 <body>
-    <header class="catalogoHeader">
-    <h1 class="caveat-700">Pata Certa</h1>
-    <h2 class="caveat-400">O lugar perfeito para encontrar um novo amigo</h2> 
+    <header class="Geral-Header">
+    <div class="primeiralinha">
+        <h1 class="caveat-700">Pata Certa</h1>
+        <h2 class="caveat-400">O lugar perfeito para encontrar um novo amigo</h2> 
         <div class="limite"></div>
         <a href="home.html" class="marca">
         <span class="marca-pata" aria-hidden="true">🐾</span></a>
-        </div>
-    </header>
+    </div>
+
+    <div class="nav-box"></div>
+        <nav aria-label="Navegação principal"   class="home-Nav"> 
+            <button class="butaolink"><a href="home.html" data-pagina="inicio">Início</a></button>
+            <button class="butaolink"><a href="catalogo.html" data-pagina="catalogo">Catálogo</a></button>
+            <button class="butaolink"><a href="favoritos.html" data-pagina="favoritos">Favoritos <span class="contador-favoritos" data-contador-favoritos hidden>0</span></a></button>
+            <button class="butaolink"><a href="solicitacoes.html" data-pagina="solicitacoes">Minhas Solicitações</a></button>
+        </nav>
+    </div>
+</header>
+
 
 <main>
-
-        <nav class="navPrincipal">
-    <a href="home.html">Início</a>
-    <a href="catalogo.html">Catálogo</a>
-    <a href="favoritos.html">Favoritos</a>
-    <a href="solicitacoes.html">Minhas solicitações</a>
-        </nav>
-    </header>
 
     <section class="introCatalogo">
         <div class="caixaSlogan">
@@ -53,12 +56,6 @@
             </div>
         </div>
     </section>
-
-        <div class="filter-bar" id="catalogo">
-            <button class="filtro" data-species="all" aria-pressed="true">Resgatados</button>
-            <button class="filtro" id ="cães" data-species="dog" aria-pressed="false">Cães</button>
-            <button class="filtro" id ="gatos" data-species="cat" aria-pressed="false">Gatos</button>
-        </div>
 
         <div class="pesquisar">
             <input type="search" id="pesquisar" placeholder="Buscar por nome ou especie">
