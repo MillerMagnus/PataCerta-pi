@@ -239,7 +239,7 @@ const animais = [
     sexo: "Macho",
     cidade: "Araçatuba",
     status: "Disponível",
-    imagem: "",
+    imagem: "/images/ted.jpeg",
     descricao: "Ted de 10 anos, pequeno, charmoso e cheio de carinho para oferecer. Ele está em Araçatuba e espera por uma família que possa lhe proporcionar amor, cuidado e uma vida tranquila. Um companheiro especial que merece uma segunda chance para viver seus melhores momentos ao lado de quem o ame"
   },
 ];
@@ -448,33 +448,30 @@ const mensagemSoli = document.getElementById ("mensagemSoli");
 
         <div class="info-animal">
           <h2>${solicitacao.animalNome || "Animal não especificado"}</h2>
-
           <p>
             <strong>Espécie:</strong>
             ${solicitacao.animalEspecie || "-"}
           </p>
-
           <p>
             <strong>Idade:</strong>
             ${solicitacao.animalIdade || "-"}
           </p>
-
           <p>
             <strong>Cidade:</strong>
             ${solicitacao.animalCidade || "-"}
           </p>
-
           <p>
             <strong>Status:</strong>
             Solicitação enviada
           </p>
         </div>
 
-      
+      <container class="box-solicitacao">
 
-      <hr>
 
-      <div class="dados-solicitante">
+
+
+<div class="dados-solicitante">
         <h3>Dados do solicitante</h3>
 
         <p><strong>Nome:</strong> ${solicitacao.nome}</p>
@@ -482,9 +479,19 @@ const mensagemSoli = document.getElementById ("mensagemSoli");
         <p><strong>Telefone:</strong> ${solicitacao.telefone}</p>
         <p><strong>Endereço:</strong> ${solicitacao.endereco}</p>
       </div>
-      <div class="botoes-solicitacao">
+
+
+<div class="botoes-solicitacao">
       <button class="cancelarsoli" data-index="${index}"> Cancelar solicitação </button>
       </div>
+
+
+      </container>
+      
+
+
+      
+      
       </div>
     `;
 

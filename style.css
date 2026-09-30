@@ -163,8 +163,9 @@ h3 {
 .carousel-slide {
     min-width:100%;
     flex-shrink:0;
-    background-image: url("/images/fundopataslaterais.jpeg") ;
+    background-image: url("/images/fundopatasmall.jpg") ;
     background-size: cover;
+    padding: 20px;
 }
 
 .carousel-slide img {
@@ -873,44 +874,85 @@ form.formulario button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
     
 
 }
+
+.mensagem-Soli{
+    font-family: "caveat";
+    font-size: 30px ;
+}
+
 .card-animal {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 14px;
+    flex-wrap: wrap;
+    padding: 5px;
     border: 1px solid #000000;
-    margin: 10px;
-    background-color: #c9eae6;
+    margin: 5px;
+    background-color: #599b5e60;
     width:fit-content;
-    height: 600px;
+    max-width: 600px;
+    max-height: fit-content;
+    height: 500px;
+    min-height: fit-content;
 }
 .card-animal img {
     display: flex;
     justify-content: center;
     width: auto;
-    height: 75%;
+    height: 300px;
     border-radius: 10px;
     margin: 10px;
 }
+
+.info-animal{
+    padding: 20px;
+    background-color: #90bde736;
+    max-width:fit-content ;
+    max-height: fit-content;
+    align-self:center;
+    margin: 10px;
+}
+
+.dados-solicitante{
+    padding: 10px;
+    background-color: #c0e0ee2d;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+.botoes-solicitacao {
+    padding: 10px;
+    align-self: flex-end;
+}
+
+.cancelarsoli {
+    padding: 10px;
+    color: #a6f0f5;
+    margin: 5px;
+    background-color: #000000;
+}
+
 .solis {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: transparent;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 10px;
 }
 
 .card-solicitacao {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #944545;
+    justify-content: space-around;
     padding: 10px;
+    align-items: center;
+}
+
+.box-solicitacao{
+    padding: 20px;
+    align-items: center;
+    display: flex;
 }
